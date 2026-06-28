@@ -1,4 +1,4 @@
-const siteName = "GAIB Agro Equipment Pvt. Ltd.";
+const siteName = "GAIB Agro Equipment Private Limited";
 
 const ensureMeta = (selector, attributes) => {
   let element = document.head.querySelector(selector);
@@ -16,7 +16,11 @@ const ensureMeta = (selector, attributes) => {
   });
 };
 
-export const applySeo = ({ title, description, image = "/images/hero/baba-super-thresher-hero.svg" }) => {
+export const applySeo = ({
+  title,
+  description,
+  image = "/images/products/baba-super-multi-crop-thresher.jpg",
+}) => {
   const pageTitle = title ? `${title} | ${siteName}` : siteName;
   document.title = pageTitle;
 

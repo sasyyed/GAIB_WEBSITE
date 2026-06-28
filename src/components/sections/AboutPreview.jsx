@@ -9,7 +9,7 @@ const AboutPreview = () => {
       <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
         <Heading
           eyebrow="Company"
-          title="GAIB Agro Equipment Pvt. Ltd."
+          title="GAIB Agro Equipment Private Limited"
           description="A modern agricultural equipment company focused on dependable manufacturing, product clarity, and long-term farmer trust."
         />
         <motion.div

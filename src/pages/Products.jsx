@@ -8,8 +8,8 @@ const Products = () => {
   usePageSeo({
     title: "Products",
     description:
-      "Explore GAIB Agro Equipment products including Baba Super Thresher, Seed Cum Fertilizer Drill, and Cultivator.",
-    image: "/images/products/baba-super-thresher.svg",
+      "Explore GAIB Agro Equipment products including Baba Super Multi Crop Thresher, Seed Cum Fertilizer Drill, Cultivator, and more farm equipment.",
+    image: "/images/products/baba-super-multi-crop-thresher.jpg",
   });
 
   return (
@@ -18,8 +18,8 @@ const Products = () => {
         eyebrow="Products"
         title="Agricultural equipment with every product front and center."
         description="Compare the complete GAIB range and choose the right machine for your field work."
-        image="/images/hero/baba-super-thresher-hero.svg"
-        imageAlt="GAIB Baba Super Thresher"
+        image="/images/products/baba-super-multi-crop-thresher.jpg"
+        imageAlt="GAIB Baba Super Multi Crop Thresher"
       />
       <Section className="bg-white">
         <div className="grid gap-6 md:grid-cols-3">

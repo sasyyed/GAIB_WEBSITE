@@ -7,7 +7,7 @@ const values = [
   {
     title: "Company Story",
     description:
-      "GAIB Agro Equipment Pvt. Ltd. is presented as a focused manufacturer of practical, premium farm equipment.",
+      "GAIB Agro Equipment Private Limited is presented as a focused manufacturer of practical, premium farm equipment.",
     icon: FiAward,
   },
   {
@@ -34,7 +34,7 @@ const About = () => {
   usePageSeo({
     title: "About",
     description:
-      "Learn about GAIB Agro Equipment Pvt. Ltd., its mission, manufacturing focus, quality promise, and farmer-first vision.",
+      "Learn about GAIB Agro Equipment Private Limited, its mission, manufacturing focus, quality promise, and farmer-first vision.",
     image: "/images/gallery/factory-floor.svg",
   });
 

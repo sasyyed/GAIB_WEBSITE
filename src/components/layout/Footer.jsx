@@ -1,5 +1,6 @@
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { company, companyContactLinks } from "../../data/company";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 
@@ -20,13 +21,12 @@ const Footer = () => {
             <Link to="/" className="focus-ring inline-flex items-center gap-3 rounded-full">
               <img src="/images/logo/gaib-logo.svg" alt="GAIB Agro Equipment logo" className="h-14 w-14" />
               <span>
-                <span className="block font-display text-xl font-bold">GAIB Agro</span>
-                <span className="text-sm text-white/65">Har Kisan Ki Bharosemand Pasand</span>
+                <span className="block font-display text-xl font-bold">{company.shortName}</span>
+                <span className="text-sm text-white/65">{company.tagline}</span>
               </span>
             </Link>
             <p className="mt-6 max-w-md leading-8 text-white/68">
-              Premium agricultural equipment engineered for dependable field performance,
-              manufacturing discipline, and farmer-first service.
+              {company.englishTagline}. {company.promise}
             </p>
           </div>
 
@@ -50,15 +50,15 @@ const Footer = () => {
             <div className="mt-5 grid gap-4 text-white/68">
               <p className="flex gap-3">
                 <FiMapPin className="mt-1 size-5 shrink-0 text-gaib-gold" aria-hidden="true" />
-                <span>Factory and registered office: GAIB Agro Equipment Pvt. Ltd., India.</span>
+                <span>{company.factoryAddress}</span>
               </p>
-              <a className="focus-ring flex w-fit items-center gap-3 rounded-full hover:text-gaib-gold" href="tel:+910000000000">
+              <a className="focus-ring flex w-fit items-center gap-3 rounded-full hover:text-gaib-gold" href={companyContactLinks.phone}>
                 <FiPhone className="size-5 text-gaib-gold" aria-hidden="true" />
-                +91 00000 00000
+                {company.phones.join(" | ")}
               </a>
-              <a className="focus-ring flex w-fit items-center gap-3 rounded-full hover:text-gaib-gold" href="mailto:info@gaibagro.com">
+              <a className="focus-ring flex w-fit items-center gap-3 rounded-full hover:text-gaib-gold" href={companyContactLinks.email}>
                 <FiMail className="size-5 text-gaib-gold" aria-hidden="true" />
-                info@gaibagro.com
+                {company.email}
               </a>
             </div>
             <Button to="/contact" variant="light" className="mt-7">
@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 pt-6 text-sm text-white/48">
-          © {new Date().getFullYear()} GAIB Agro Equipment Pvt. Ltd. All rights reserved.
+          &copy; {new Date().getFullYear()} {company.name}. All rights reserved.
         </div>
       </Container>
     </footer>

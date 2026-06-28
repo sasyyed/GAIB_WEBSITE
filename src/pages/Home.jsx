@@ -12,7 +12,7 @@ const Home = () => {
   usePageSeo({
     title: "Premium Agro Equipment",
     description:
-      "GAIB Agro Equipment Pvt. Ltd. builds premium threshers, seed drills, cultivators, and agricultural equipment trusted by farmers.",
+      "GAIB Agro Equipment Private Limited builds premium threshers, seed drills, cultivators, and agricultural equipment trusted by farmers.",
   });
 
   return (

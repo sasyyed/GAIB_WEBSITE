@@ -1,6 +1,6 @@
 # GAIB Agro Equipment Website
 
-Production-ready React website for GAIB Agro Equipment Pvt. Ltd.
+Production-ready React website for GAIB Agro Equipment Private Limited.
 
 ## Tech Stack
 

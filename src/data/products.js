@@ -1,17 +1,17 @@
 export const products = [
   {
     id: "baba-super-thresher",
-    name: "Baba Super Thresher",
+    name: "Baba Super Multi Crop Thresher",
     tagline: "Main Hero Product",
     category: "Thresher",
     shortDescription:
       "A heavy duty thresher built for dependable crop separation, field speed, and low maintenance ownership.",
     description:
-      "Baba Super Thresher is engineered for farmers who need strong throughput, clean output, and long service life during demanding harvest seasons.",
-    image: "/images/products/baba-super-thresher.svg",
-    heroImage: "/images/hero/baba-super-thresher-hero.svg",
+      "Baba Super Multi Crop Thresher is engineered for farmers who need strong throughput, clean output, and long service life during demanding harvest seasons.",
+    image: "/images/products/baba-super-multi-crop-thresher.jpg",
+    heroImage: "/images/products/baba-super-multi-crop-thresher.jpg",
     gallery: [
-      "/images/products/baba-super-thresher.svg",
+      "/images/products/baba-super-multi-crop-thresher.jpg",
       "/images/gallery/thresher-detail.svg",
       "/images/gallery/factory-floor.svg",
     ],
@@ -313,6 +313,11 @@ export const products = [
 
 export const galleryImages = [
   {
+    src: "/images/products/baba-super-multi-crop-thresher.jpg",
+    alt: "Baba Super Multi Crop Thresher working in a field",
+    title: "Baba Super Multi Crop Thresher",
+  },
+  {
     src: "/images/gallery/factory-floor.svg",
     alt: "GAIB factory floor with agricultural equipment assembly",
     title: "Manufacturing Floor",
@@ -329,7 +334,7 @@ export const galleryImages = [
   },
   {
     src: "/images/gallery/thresher-detail.svg",
-    alt: "Baba Super Thresher detail",
+    alt: "Baba Super Multi Crop Thresher detail",
     title: "Thresher Detail",
   },
   {

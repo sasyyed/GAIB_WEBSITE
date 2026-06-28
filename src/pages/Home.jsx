@@ -13,6 +13,7 @@ const Home = () => {
     title: "Premium Agro Equipment",
     description:
       "GAIB Agro Equipment Private Limited builds premium threshers, seed drills, cultivators, and agricultural equipment trusted by farmers.",
+    image: "/images/hero/hero-1.png",
   });
 
   return (

@@ -1,5 +1,4 @@
 import DealerCTA from "../components/sections/DealerCTA";
-import FeatureStrip from "../components/sections/FeatureStrip";
 import Factory from "../components/sections/Factory";
 import Hero from "../components/sections/Hero";
 import HeroProductSpotlight from "../components/sections/HeroProductSpotlight";
@@ -19,7 +18,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <FeatureStrip />
       <WhyChoose />
       <HeroProductSpotlight />
       <StatsStrip />

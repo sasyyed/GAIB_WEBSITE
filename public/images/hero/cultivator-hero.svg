@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Cultivator hero image</title>
+  <desc id="desc">Large hero illustration of GAIB cultivator.</desc>
+  <rect width="1400" height="1000" fill="none"/>
+  <ellipse cx="706" cy="800" rx="465" ry="64" fill="#000000" opacity="0.22"/>
+  <path d="M178 430h865l140 136H312L178 430Z" fill="#0B5D2A"/>
+  <path d="M262 358h660l98 88H360l-98-88Z" fill="#17773A"/>
+  <path d="M1013 430l157-112" fill="none" stroke="#0B5D2A" stroke-width="38" stroke-linecap="round"/>
+  <g fill="#D8A31A">
+    <path d="M310 566h68l-54 210h-68z"/>
+    <path d="M492 566h68l-54 210h-68z"/>
+    <path d="M674 566h68l-54 210h-68z"/>
+    <path d="M856 566h68l-54 210h-68z"/>
+    <path d="M1038 566h68l-54 210h-68z"/>
+  </g>
+  <circle cx="362" cy="766" r="68" fill="#1B1B1B"/>
+  <circle cx="362" cy="766" r="29" fill="#FAFAF7"/>
+  <circle cx="948" cy="766" r="68" fill="#1B1B1B"/>
+  <circle cx="948" cy="766" r="29" fill="#FAFAF7"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Workshop line</title>
+  <desc id="desc">Illustration of GAIB workshop production line.</desc>
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+  <rect x="0" y="0" width="1200" height="210" fill="#0B5D2A"/>
+  <path d="M0 210h1200v590H0z" fill="#EFEFE8"/>
+  <path d="M132 292h936" stroke="#1B1B1B" stroke-width="22" stroke-linecap="round" opacity="0.15"/>
+  <g>
+    <rect x="120" y="350" width="248" height="128" rx="26" fill="#0B5D2A"/>
+    <circle cx="170" cy="488" r="38" fill="#1B1B1B"/>
+    <circle cx="316" cy="488" r="38" fill="#1B1B1B"/>
+  </g>
+  <g>
+    <rect x="476" y="340" width="248" height="138" rx="26" fill="#D8A31A"/>
+    <circle cx="526" cy="488" r="38" fill="#1B1B1B"/>
+    <circle cx="672" cy="488" r="38" fill="#1B1B1B"/>
+  </g>
+  <g>
+    <rect x="832" y="350" width="248" height="128" rx="26" fill="#0B5D2A"/>
+    <circle cx="882" cy="488" r="38" fill="#1B1B1B"/>
+    <circle cx="1028" cy="488" r="38" fill="#1B1B1B"/>
+  </g>
+  <rect x="176" y="92" width="850" height="42" rx="21" fill="#FFFFFF" opacity="0.85"/>
+  <path d="M110 642h980" stroke="#0B5D2A" stroke-width="18" stroke-linecap="round" opacity="0.22"/>
+</svg>

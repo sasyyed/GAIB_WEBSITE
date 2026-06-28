@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+  <title id="title">Field icon</title>
+  <desc id="desc">Simple green and gold field icon.</desc>
+  <rect width="120" height="120" rx="28" fill="#FAFAF7"/>
+  <path d="M20 82c20-22 48-33 80-34" fill="none" stroke="#0B5D2A" stroke-width="10" stroke-linecap="round"/>
+  <path d="M20 98c24-16 52-24 80-24" fill="none" stroke="#D8A31A" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="88" cy="28" r="12" fill="#D8A31A"/>
+</svg>

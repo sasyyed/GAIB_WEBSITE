@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Seed Cum Fertilizer Drill hero image</title>
+  <desc id="desc">Large hero illustration of seed cum fertilizer drill.</desc>
+  <rect width="1400" height="1000" fill="none"/>
+  <ellipse cx="690" cy="798" rx="470" ry="60" fill="#000000" opacity="0.22"/>
+  <rect x="205" y="372" width="886" height="142" rx="40" fill="#0B5D2A"/>
+  <path d="M290 248h710l-72 142H362l-72-142Z" fill="#17773A"/>
+  <rect x="360" y="292" width="572" height="33" rx="16" fill="#FAFAF7" opacity="0.58"/>
+  <path d="M270 514h720" stroke="#1B1B1B" stroke-width="34" stroke-linecap="round" opacity="0.18"/>
+  <g fill="#D8A31A">
+    <path d="M315 514l-45 238h68l40-238Z"/>
+    <path d="M456 514l-45 238h68l40-238Z"/>
+    <path d="M597 514l-45 238h68l40-238Z"/>
+    <path d="M738 514l-45 238h68l40-238Z"/>
+    <path d="M879 514l-45 238h68l40-238Z"/>
+  </g>
+  <circle cx="270" cy="742" r="75" fill="#1B1B1B"/>
+  <circle cx="270" cy="742" r="32" fill="#FAFAF7"/>
+  <circle cx="990" cy="742" r="75" fill="#1B1B1B"/>
+  <circle cx="990" cy="742" r="32" fill="#FAFAF7"/>
+  <path d="M1046 420h160l76 92" fill="none" stroke="#0B5D2A" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

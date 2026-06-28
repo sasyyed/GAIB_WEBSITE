@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Baba Super Thresher</title>
+  <desc id="desc">Illustration of a green and gold agricultural thresher.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="960" cy="170" r="120" fill="#D8A31A" opacity="0.18"/>
+  <rect x="170" y="445" width="725" height="188" rx="42" fill="#0B5D2A"/>
+  <rect x="280" y="325" width="520" height="170" rx="34" fill="#17773A"/>
+  <path d="M780 358h178c40 0 72 32 72 72v72H780V358Z" fill="#0B5D2A"/>
+  <path d="M248 367h165l-54 110H196l52-110Z" fill="#D8A31A"/>
+  <path d="M784 340h130l96-86h-130l-96 86Z" fill="#D8A31A"/>
+  <rect x="334" y="370" width="390" height="35" rx="17" fill="#FAFAF7" opacity="0.9"/>
+  <rect x="338" y="432" width="315" height="24" rx="12" fill="#FAFAF7" opacity="0.35"/>
+  <circle cx="328" cy="642" r="92" fill="#1B1B1B"/>
+  <circle cx="328" cy="642" r="45" fill="#D8A31A"/>
+  <circle cx="764" cy="642" r="92" fill="#1B1B1B"/>
+  <circle cx="764" cy="642" r="45" fill="#D8A31A"/>
+  <path d="M123 638h962" stroke="#1B1B1B" stroke-width="16" stroke-linecap="round" opacity="0.12"/>
+  <text x="520" y="548" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="52" font-weight="800" fill="#FFFFFF">BABA SUPER</text>
+</svg>

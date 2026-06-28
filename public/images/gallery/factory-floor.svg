@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">GAIB factory floor</title>
+  <desc id="desc">Illustration of an agricultural equipment factory floor.</desc>
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+  <path d="M0 222h1200v578H0z" fill="#ECECE5"/>
+  <path d="M0 222 240 90h720l240 132H0Z" fill="#1B1B1B"/>
+  <path d="M110 245h980" stroke="#0B5D2A" stroke-width="18" stroke-linecap="round"/>
+  <g fill="#FFFFFF" opacity="0.88">
+    <rect x="170" y="132" width="120" height="36" rx="18"/>
+    <rect x="392" y="132" width="120" height="36" rx="18"/>
+    <rect x="614" y="132" width="120" height="36" rx="18"/>
+    <rect x="836" y="132" width="120" height="36" rx="18"/>
+  </g>
+  <rect x="140" y="420" width="380" height="118" rx="28" fill="#0B5D2A"/>
+  <circle cx="220" cy="548" r="54" fill="#1B1B1B"/>
+  <circle cx="452" cy="548" r="54" fill="#1B1B1B"/>
+  <rect x="690" y="370" width="330" height="172" rx="28" fill="#D8A31A"/>
+  <rect x="738" y="402" width="236" height="34" rx="17" fill="#FFFFFF" opacity="0.75"/>
+  <path d="M0 704h1200" stroke="#1B1B1B" stroke-width="18" opacity="0.1"/>
+</svg>

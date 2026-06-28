@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cultivator</title>
+  <desc id="desc">Illustration of a rugged green agricultural cultivator.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="958" cy="180" r="140" fill="#D8A31A" opacity="0.2"/>
+  <path d="M170 390h735l118 116H284L170 390Z" fill="#0B5D2A"/>
+  <path d="M242 330h560l82 76H324l-82-76Z" fill="#17773A"/>
+  <path d="M878 390l132-96" fill="none" stroke="#0B5D2A" stroke-width="32" stroke-linecap="round"/>
+  <g fill="#D8A31A">
+    <path d="M274 504h58l-46 178h-58z"/>
+    <path d="M428 504h58l-46 178h-58z"/>
+    <path d="M582 504h58l-46 178h-58z"/>
+    <path d="M736 504h58l-46 178h-58z"/>
+    <path d="M890 504h58l-46 178h-58z"/>
+  </g>
+  <circle cx="318" cy="676" r="58" fill="#1B1B1B"/>
+  <circle cx="318" cy="676" r="24" fill="#FAFAF7"/>
+  <circle cx="814" cy="676" r="58" fill="#1B1B1B"/>
+  <circle cx="814" cy="676" r="24" fill="#FAFAF7"/>
+  <path d="M154 716h924" stroke="#1B1B1B" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+</svg>

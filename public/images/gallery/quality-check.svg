@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Quality check</title>
+  <desc id="desc">Illustration of quality inspection for agricultural equipment.</desc>
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+  <rect x="140" y="128" width="920" height="560" rx="48" fill="#FFFFFF"/>
+  <rect x="202" y="206" width="430" height="268" rx="34" fill="#0B5D2A"/>
+  <circle cx="292" cy="500" r="62" fill="#1B1B1B"/>
+  <circle cx="542" cy="500" r="62" fill="#1B1B1B"/>
+  <path d="M724 248h244" stroke="#D8A31A" stroke-width="36" stroke-linecap="round"/>
+  <path d="M724 334h244" stroke="#0B5D2A" stroke-width="28" stroke-linecap="round" opacity="0.3"/>
+  <path d="M724 410h180" stroke="#0B5D2A" stroke-width="28" stroke-linecap="round" opacity="0.3"/>
+  <path d="m732 540 58 58 134-156" fill="none" stroke="#0B5D2A" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140 688h920" stroke="#1B1B1B" stroke-width="18" opacity="0.08"/>
+</svg>

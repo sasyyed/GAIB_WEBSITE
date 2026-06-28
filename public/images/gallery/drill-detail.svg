@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Drill detail</title>
+  <desc id="desc">Close detail illustration of seed drill hoppers and row units.</desc>
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+  <path d="M198 150h804l-84 172H282l-84-172Z" fill="#0B5D2A"/>
+  <rect x="276" y="210" width="648" height="34" rx="17" fill="#FFFFFF" opacity="0.6"/>
+  <rect x="252" y="322" width="690" height="96" rx="28" fill="#17773A"/>
+  <g fill="#D8A31A">
+    <path d="M326 418h60l-48 220h-60z"/>
+    <path d="M486 418h60l-48 220h-60z"/>
+    <path d="M646 418h60l-48 220h-60z"/>
+    <path d="M806 418h60l-48 220h-60z"/>
+  </g>
+  <circle cx="284" cy="638" r="58" fill="#1B1B1B"/>
+  <circle cx="916" cy="638" r="58" fill="#1B1B1B"/>
+  <path d="M146 692h908" stroke="#1B1B1B" stroke-width="16" opacity="0.1"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Baba Super Thresher hero image</title>
+  <desc id="desc">Large hero illustration of Baba Super Thresher.</desc>
+  <rect width="1400" height="1000" fill="none"/>
+  <ellipse cx="705" cy="818" rx="470" ry="64" fill="#000000" opacity="0.22"/>
+  <rect x="170" y="456" width="835" height="220" rx="52" fill="#0B5D2A"/>
+  <rect x="318" y="306" width="608" height="206" rx="42" fill="#17773A"/>
+  <path d="M900 345h225c49 0 89 40 89 89v92H900V345Z" fill="#0B5D2A"/>
+  <path d="M270 356h202l-68 132H204l66-132Z" fill="#D8A31A"/>
+  <path d="M900 320h154l116-102h-154L900 320Z" fill="#D8A31A"/>
+  <rect x="386" y="357" width="454" height="42" rx="21" fill="#FAFAF7" opacity="0.88"/>
+  <rect x="390" y="430" width="360" height="28" rx="14" fill="#FAFAF7" opacity="0.34"/>
+  <circle cx="350" cy="690" r="108" fill="#1B1B1B"/>
+  <circle cx="350" cy="690" r="52" fill="#D8A31A"/>
+  <circle cx="852" cy="690" r="108" fill="#1B1B1B"/>
+  <circle cx="852" cy="690" r="52" fill="#D8A31A"/>
+  <text x="606" y="580" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="62" font-weight="800" fill="#FFFFFF">BABA SUPER</text>
+</svg>

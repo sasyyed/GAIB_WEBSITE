@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Cultivator detail</title>
+  <desc id="desc">Close detail illustration of cultivator tines and frame.</desc>
+  <rect width="1200" height="800" fill="#FAFAF7"/>
+  <path d="M150 230h900l96 118H246L150 230Z" fill="#0B5D2A"/>
+  <path d="M250 172h690l68 74H318l-68-74Z" fill="#17773A"/>
+  <g fill="#D8A31A">
+    <path d="M260 348h70l-60 270h-70z"/>
+    <path d="M446 348h70l-60 270h-70z"/>
+    <path d="M632 348h70l-60 270h-70z"/>
+    <path d="M818 348h70l-60 270h-70z"/>
+  </g>
+  <circle cx="306" cy="646" r="62" fill="#1B1B1B"/>
+  <circle cx="866" cy="646" r="62" fill="#1B1B1B"/>
+  <path d="M120 704h960" stroke="#1B1B1B" stroke-width="16" opacity="0.1"/>
+</svg>

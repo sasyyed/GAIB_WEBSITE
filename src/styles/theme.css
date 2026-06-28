@@ -1,0 +1,12 @@
+@theme {
+  --color-gaib-green: #0b5d2a;
+  --color-gaib-green-dark: #08431f;
+  --color-gaib-gold: #d8a31a;
+  --color-gaib-cream: #fafaf7;
+  --color-gaib-dark: #1b1b1b;
+  --color-gaib-gray: #6b7280;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --shadow-soft: 0 24px 70px rgb(27 27 27 / 0.1);
+  --shadow-card: 0 18px 55px rgb(27 27 27 / 0.08);
+}

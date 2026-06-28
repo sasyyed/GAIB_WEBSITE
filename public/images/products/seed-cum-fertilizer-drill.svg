@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Seed Cum Fertilizer Drill</title>
+  <desc id="desc">Illustration of a seed cum fertilizer drill with hopper and row units.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="228" cy="168" r="125" fill="#0B5D2A" opacity="0.1"/>
+  <rect x="188" y="330" width="760" height="120" rx="34" fill="#0B5D2A"/>
+  <path d="M260 240h610l-60 118H320l-60-118Z" fill="#17773A"/>
+  <rect x="318" y="276" width="492" height="28" rx="14" fill="#FAFAF7" opacity="0.55"/>
+  <path d="M250 450h610" stroke="#1B1B1B" stroke-width="28" stroke-linecap="round" opacity="0.16"/>
+  <g fill="#D8A31A">
+    <path d="M280 450l-38 205h58l34-205Z"/>
+    <path d="M402 450l-38 205h58l34-205Z"/>
+    <path d="M524 450l-38 205h58l34-205Z"/>
+    <path d="M646 450l-38 205h58l34-205Z"/>
+    <path d="M768 450l-38 205h58l34-205Z"/>
+  </g>
+  <circle cx="238" cy="654" r="64" fill="#1B1B1B"/>
+  <circle cx="238" cy="654" r="28" fill="#FAFAF7"/>
+  <circle cx="850" cy="654" r="64" fill="#1B1B1B"/>
+  <circle cx="850" cy="654" r="28" fill="#FAFAF7"/>
+  <path d="M910 370h130l62 78" fill="none" stroke="#0B5D2A" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M142 688h930" stroke="#1B1B1B" stroke-width="14" stroke-linecap="round" opacity="0.12"/>
+</svg>

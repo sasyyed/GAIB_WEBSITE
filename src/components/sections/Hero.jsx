@@ -1,22 +1,13 @@
 import { motion } from "framer-motion";
-import { FiPhoneCall, FiUsers } from "react-icons/fi";
+import { FiCheckCircle, FiPhoneCall, FiUsers } from "react-icons/fi";
 import { company, companyContactLinks } from "../../data/company";
-import { products } from "../../data/products";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 
 const Hero = () => {
-  const heroProduct = products.find((product) => product.id === "baba-super-thresher");
-
   return (
     <section className="relative isolate overflow-hidden bg-[#f7f3e8] pt-20">
-      <img
-        src={heroProduct.heroImage}
-        alt=""
-        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-30"
-        loading="eager"
-      />
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(250,250,247,0.96)_0%,rgba(250,250,247,0.9)_38%,rgba(250,250,247,0.42)_68%,rgba(250,250,247,0.2)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_82%_18%,rgba(216,163,26,0.22),transparent_30%),linear-gradient(100deg,#fbfaf3_0%,#f8f1d8_52%,#e9f0dc_100%)]" />
       <Container className="grid min-h-[680px] items-center gap-10 py-12 lg:grid-cols-[0.88fr_1.12fr] lg:py-16">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -68,13 +59,29 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
         >
-          <div className="absolute inset-x-10 bottom-4 h-16 rounded-full bg-black/20 blur-3xl" />
-          <img
-            src={heroProduct.heroImage}
-            alt={heroProduct.name}
-            className="relative mx-auto aspect-[4/3] w-full max-w-3xl rounded-[24px] object-cover shadow-soft"
-            loading="eager"
-          />
+          <div className="rounded-[24px] border border-gaib-green/12 bg-white/82 p-7 shadow-soft backdrop-blur sm:p-9">
+            <p className="font-display text-sm font-bold uppercase tracking-[0.16em] text-gaib-gold">
+              Baba Super Multi Crop Thresher
+            </p>
+            <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight text-gaib-dark sm:text-4xl">
+              Built for high output, clean grain separation, and reliable field performance.
+            </h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {[
+                "Multi crop compatibility",
+                "Superior grain separation",
+                "Enhanced fuel efficiency",
+                "Rugged construction",
+                "Easy maintenance",
+                "Farmer friendly design",
+              ].map((item) => (
+                <p key={item} className="flex items-center gap-3 text-sm font-bold text-gaib-gray">
+                  <FiCheckCircle className="size-5 shrink-0 text-gaib-green" aria-hidden="true" />
+                  {item}
+                </p>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </Container>
       <div className="h-5 bg-gaib-gold" />

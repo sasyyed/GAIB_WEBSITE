@@ -19,12 +19,22 @@ const HeroProductSpotlight = () => {
   return (
     <Section className="bg-[linear-gradient(90deg,#fbfbf5,#f1f5df)]">
       <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <img
-          src={product.heroImage}
-          alt={product.name}
-          className="aspect-[4/3] w-full rounded-[24px] object-cover shadow-soft"
-          loading="lazy"
-        />
+        <div className="rounded-[24px] bg-white p-7 shadow-card sm:p-9">
+          <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
+            Product Focus
+          </p>
+          <h3 className="mt-4 font-display text-3xl font-extrabold leading-tight text-gaib-dark">
+            Engineered for harvesting seasons where speed, strength, and clean output matter.
+          </h3>
+          <div className="mt-7 grid gap-4">
+            {product.specifications.slice(0, 5).map((item) => (
+              <div key={item.label} className="flex items-center justify-between gap-4 border-b border-gaib-dark/10 pb-3 text-sm last:border-b-0 last:pb-0">
+                <span className="font-bold text-gaib-dark">{item.label}</span>
+                <span className="text-right font-semibold text-gaib-gray">{item.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
         <div>
           <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
             Our Hero Product

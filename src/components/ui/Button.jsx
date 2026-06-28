@@ -4,6 +4,8 @@ import { FiArrowRight } from "react-icons/fi";
 const variants = {
   primary:
     "bg-gaib-green text-white shadow-[0_16px_35px_rgb(11_93_42_/_0.22)] hover:bg-gaib-green-dark",
+  gold:
+    "bg-gaib-gold text-gaib-dark shadow-[0_16px_35px_rgb(216_163_26_/_0.24)] hover:bg-[#c49112]",
   secondary:
     "border border-gaib-green bg-white text-gaib-green hover:bg-gaib-green hover:text-white",
   outlineLight:

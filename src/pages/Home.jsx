@@ -1,10 +1,10 @@
-import AboutPreview from "../components/sections/AboutPreview";
-import ContactPreview from "../components/sections/ContactPreview";
 import DealerCTA from "../components/sections/DealerCTA";
+import FeatureStrip from "../components/sections/FeatureStrip";
 import Factory from "../components/sections/Factory";
-import FeaturedProducts from "../components/sections/FeaturedProducts";
-import GalleryPreview from "../components/sections/GalleryPreview";
 import Hero from "../components/sections/Hero";
+import HeroProductSpotlight from "../components/sections/HeroProductSpotlight";
+import StatsStrip from "../components/sections/StatsStrip";
+import Testimonials from "../components/sections/Testimonials";
 import WhyChoose from "../components/sections/WhyChoose";
 import { usePageSeo } from "../hooks/usePageSeo";
 
@@ -18,13 +18,13 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <FeaturedProducts />
+      <FeatureStrip />
       <WhyChoose />
-      <AboutPreview />
+      <HeroProductSpotlight />
+      <StatsStrip />
       <Factory />
-      <GalleryPreview />
+      <Testimonials />
       <DealerCTA />
-      <ContactPreview />
     </>
   );
 };

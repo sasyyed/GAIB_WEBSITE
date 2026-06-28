@@ -1,39 +1,35 @@
 import { motion } from "framer-motion";
-import Button from "../ui/Button";
 import Heading from "../ui/Heading";
 import Section from "../ui/Section";
+
+const factoryImages = [
+  { src: "/images/gallery/factory-floor.svg", alt: "GAIB factory floor" },
+  { src: "/images/gallery/workshop-line.svg", alt: "GAIB workshop production line" },
+  { src: "/images/gallery/quality-check.svg", alt: "GAIB quality inspection" },
+  { src: "/images/gallery/thresher-detail.svg", alt: "GAIB thresher detail" },
+];
 
 const Factory = () => {
   return (
     <Section className="bg-white">
-      <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-        <Heading
-          eyebrow="Manufacturing"
-          title="Built in a disciplined production environment."
-          description="From fabrication to finishing, GAIB keeps manufacturing quality close to the product promise."
-        />
-        <motion.div
-          className="overflow-hidden rounded-[24px] bg-gaib-dark shadow-soft"
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.55 }}
-        >
-          <img
-            src="/images/gallery/factory-floor.svg"
-            alt="GAIB manufacturing floor"
-            className="aspect-[16/10] w-full object-cover"
-            loading="lazy"
-          />
-          <div className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-xl leading-7 text-white/72">
-              Quality checks, clean assembly flow, and product-focused presentation for dealers and farmers.
-            </p>
-            <Button to="/gallery" variant="light">
-              View Gallery
-            </Button>
-          </div>
-        </motion.div>
+      <Heading
+        title="Manufacturing Excellence"
+        description="Our manufacturing unit is equipped with advanced technology and skilled workforce to deliver world-class machinery."
+        align="center"
+      />
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {factoryImages.map((image, index) => (
+          <motion.figure
+            key={image.src}
+            className="overflow-hidden rounded-[8px] bg-gaib-cream shadow-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.45, delay: index * 0.05 }}
+          >
+            <img src={image.src} alt={image.alt} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+          </motion.figure>
+        ))}
       </div>
     </Section>
   );

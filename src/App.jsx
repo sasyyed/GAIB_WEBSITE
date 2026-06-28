@@ -19,8 +19,15 @@ const App = () => {
   const location = useLocation();
 
   useEffect(() => {
+    if (location.hash) {
+      window.setTimeout(() => {
+        document.querySelector(location.hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 0);
+      return;
+    }
+
     window.scrollTo({ top: 0, behavior: "auto" });
-  }, [location.pathname]);
+  }, [location.pathname, location.hash]);
 
   return (
     <>

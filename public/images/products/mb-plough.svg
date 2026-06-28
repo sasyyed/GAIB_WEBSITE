@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">MB Plough</title>
+  <desc id="desc">Illustration of a moldboard plough for deep soil turning.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="958" cy="180" r="134" fill="#D8A31A" opacity="0.2"/>
+  <path d="M188 372h720l120 96H310L188 372Z" fill="#0B5D2A"/>
+  <rect x="282" y="306" width="446" height="94" rx="28" fill="#17773A"/>
+  <path d="M728 356l210-112" fill="none" stroke="#0B5D2A" stroke-width="30" stroke-linecap="round"/>
+  <g fill="#D8A31A">
+    <path d="M306 468h126c-18 92-58 152-142 184 26-58 30-116 16-184Z"/>
+    <path d="M526 468h126c-18 92-58 152-142 184 26-58 30-116 16-184Z"/>
+    <path d="M746 468h126c-18 92-58 152-142 184 26-58 30-116 16-184Z"/>
+  </g>
+  <circle cx="314" cy="660" r="64" fill="#1B1B1B"/>
+  <circle cx="314" cy="660" r="27" fill="#FAFAF7"/>
+  <path d="M146 716h908" stroke="#1B1B1B" stroke-width="15" opacity="0.1" stroke-linecap="round"/>
+  <text x="532" y="446" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="46" font-weight="800" fill="#FFFFFF">MB PLOUGH</text>
+</svg>

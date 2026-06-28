@@ -7,6 +7,8 @@ import Button from "../ui/Button";
 import Container from "../ui/Container";
 
 const Hero = () => {
+  const heroProducts = products.filter((product) => product.featured);
+
   return (
     <section className="relative overflow-hidden bg-gaib-dark text-white">
       <Swiper
@@ -17,7 +19,7 @@ const Hero = () => {
         pagination={{ clickable: true }}
         className="min-h-[82svh] lg:min-h-[88svh]"
       >
-        {products.map((product) => (
+        {heroProducts.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="relative min-h-[82svh] lg:min-h-[88svh]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(216,163,26,0.18),transparent_28%),linear-gradient(135deg,rgba(11,93,42,0.95),rgba(27,27,27,0.98))]" />

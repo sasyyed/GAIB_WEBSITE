@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Laser Land Leveler</title>
+  <desc id="desc">Illustration of a laser land leveler with leveling bucket.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="230" cy="166" r="126" fill="#0B5D2A" opacity="0.1"/>
+  <path d="M178 446h748l132 156H262L178 446Z" fill="#0B5D2A"/>
+  <rect x="274" y="334" width="430" height="126" rx="34" fill="#17773A"/>
+  <path d="M738 402h178l128-104" fill="none" stroke="#0B5D2A" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M250 602h780l-70 80H320l-70-80Z" fill="#D8A31A"/>
+  <rect x="334" y="378" width="306" height="30" rx="15" fill="#FAFAF7" opacity="0.62"/>
+  <path d="M852 284l84-84 84 84" fill="none" stroke="#D8A31A" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M936 200v172" stroke="#D8A31A" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="342" cy="672" r="62" fill="#1B1B1B"/>
+  <circle cx="862" cy="672" r="62" fill="#1B1B1B"/>
+  <path d="M142 728h916" stroke="#1B1B1B" stroke-width="15" opacity="0.1" stroke-linecap="round"/>
+  <text x="526" y="534" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="42" font-weight="800" fill="#FFFFFF">LASER LEVELER</text>
+</svg>

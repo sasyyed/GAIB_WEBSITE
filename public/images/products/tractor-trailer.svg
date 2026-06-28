@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Tractor Trailer</title>
+  <desc id="desc">Illustration of a green and gold tractor trailer.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="956" cy="180" r="130" fill="#D8A31A" opacity="0.18"/>
+  <path d="M166 322h780l-86 228H246L166 322Z" fill="#0B5D2A"/>
+  <rect x="260" y="372" width="510" height="52" rx="26" fill="#FAFAF7" opacity="0.52"/>
+  <path d="M900 432h126l82 72" fill="none" stroke="#0B5D2A" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="214" y="548" width="710" height="64" rx="24" fill="#17773A"/>
+  <circle cx="326" cy="650" r="92" fill="#1B1B1B"/>
+  <circle cx="326" cy="650" r="42" fill="#D8A31A"/>
+  <circle cx="774" cy="650" r="92" fill="#1B1B1B"/>
+  <circle cx="774" cy="650" r="42" fill="#D8A31A"/>
+  <path d="M142 728h916" stroke="#1B1B1B" stroke-width="15" opacity="0.1" stroke-linecap="round"/>
+  <text x="558" y="508" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="48" font-weight="800" fill="#FFFFFF">TRACTOR TRAILER</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Disc Harrow</title>
+  <desc id="desc">Illustration of a heavy duty disc harrow.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="242" cy="162" r="118" fill="#0B5D2A" opacity="0.1"/>
+  <path d="M178 360h822l94 126H272L178 360Z" fill="#0B5D2A"/>
+  <rect x="286" y="292" width="500" height="92" rx="30" fill="#17773A"/>
+  <path d="M802 360l176-116" fill="none" stroke="#0B5D2A" stroke-width="30" stroke-linecap="round"/>
+  <g fill="#D8A31A">
+    <circle cx="282" cy="604" r="72"/>
+    <circle cx="422" cy="604" r="72"/>
+    <circle cx="562" cy="604" r="72"/>
+    <circle cx="702" cy="604" r="72"/>
+    <circle cx="842" cy="604" r="72"/>
+  </g>
+  <g fill="#1B1B1B" opacity="0.9">
+    <circle cx="282" cy="604" r="28"/>
+    <circle cx="422" cy="604" r="28"/>
+    <circle cx="562" cy="604" r="28"/>
+    <circle cx="702" cy="604" r="28"/>
+    <circle cx="842" cy="604" r="28"/>
+  </g>
+  <rect x="330" y="324" width="372" height="26" rx="13" fill="#FAFAF7" opacity="0.55"/>
+  <path d="M142 706h916" stroke="#1B1B1B" stroke-width="15" opacity="0.1" stroke-linecap="round"/>
+  <text x="594" y="472" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="46" font-weight="800" fill="#FFFFFF">DISC HARROW</text>
+</svg>

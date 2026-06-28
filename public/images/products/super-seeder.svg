@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Super Seeder</title>
+  <desc id="desc">Illustration of a super seeder for residue smart sowing.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="952" cy="174" r="124" fill="#D8A31A" opacity="0.18"/>
+  <rect x="174" y="390" width="792" height="132" rx="36" fill="#0B5D2A"/>
+  <path d="M260 248h612l-70 166H330l-70-166Z" fill="#17773A"/>
+  <rect x="328" y="300" width="474" height="32" rx="16" fill="#FAFAF7" opacity="0.58"/>
+  <path d="M958 420h114l58 72" fill="none" stroke="#0B5D2A" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#D8A31A">
+    <path d="M284 522h56l-42 150h-56z"/>
+    <path d="M412 522h56l-42 150h-56z"/>
+    <path d="M540 522h56l-42 150h-56z"/>
+    <path d="M668 522h56l-42 150h-56z"/>
+    <path d="M796 522h56l-42 150h-56z"/>
+  </g>
+  <circle cx="274" cy="680" r="68" fill="#1B1B1B"/>
+  <circle cx="882" cy="680" r="68" fill="#1B1B1B"/>
+  <path d="M142 728h916" stroke="#1B1B1B" stroke-width="15" opacity="0.1" stroke-linecap="round"/>
+  <text x="568" y="474" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="48" font-weight="800" fill="#FFFFFF">SUPER SEEDER</text>
+</svg>

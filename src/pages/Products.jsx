@@ -16,8 +16,8 @@ const Products = () => {
     <>
       <PageHero
         eyebrow="Products"
-        title="Agricultural equipment with the product front and center."
-        description="Compare the primary GAIB range and choose the right machine for your field work."
+        title="Agricultural equipment with every product front and center."
+        description="Compare the complete GAIB range and choose the right machine for your field work."
         image="/images/hero/baba-super-thresher-hero.svg"
         imageAlt="GAIB Baba Super Thresher"
       />

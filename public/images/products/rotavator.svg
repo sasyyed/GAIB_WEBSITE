@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Rotavator</title>
+  <desc id="desc">Illustration of a green and gold agricultural rotavator.</desc>
+  <rect width="1200" height="900" fill="#FAFAF7"/>
+  <circle cx="956" cy="176" r="132" fill="#D8A31A" opacity="0.18"/>
+  <path d="M160 380h820l86 114H246L160 380Z" fill="#0B5D2A"/>
+  <rect x="260" y="295" width="568" height="118" rx="34" fill="#17773A"/>
+  <path d="M865 374h112l86-78" fill="none" stroke="#0B5D2A" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="318" y="338" width="420" height="30" rx="15" fill="#FAFAF7" opacity="0.62"/>
+  <g fill="#D8A31A">
+    <path d="M276 494h54l-50 150h-54z"/>
+    <path d="M402 494h54l-50 150h-54z"/>
+    <path d="M528 494h54l-50 150h-54z"/>
+    <path d="M654 494h54l-50 150h-54z"/>
+    <path d="M780 494h54l-50 150h-54z"/>
+  </g>
+  <circle cx="330" cy="668" r="74" fill="#1B1B1B"/>
+  <circle cx="330" cy="668" r="32" fill="#FAFAF7"/>
+  <circle cx="848" cy="668" r="74" fill="#1B1B1B"/>
+  <circle cx="848" cy="668" r="32" fill="#FAFAF7"/>
+  <path d="M136 718h928" stroke="#1B1B1B" stroke-width="15" opacity="0.1" stroke-linecap="round"/>
+  <text x="596" y="582" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="46" font-weight="800" fill="#FFFFFF">ROTAVATOR</text>
+</svg>

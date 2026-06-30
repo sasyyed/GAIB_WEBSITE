@@ -28,7 +28,48 @@ const Hero = () => {
   return (
     <section className="relative isolate overflow-hidden bg-gaib-dark pt-20">
       <h1 className="sr-only">Agricultural Equipment Manufacturer India | GAIB Agro Equipment Pvt Ltd</h1>
-      <div className="relative min-h-[620px] md:aspect-[1764/880] md:min-h-0">
+
+      <div className="bg-gaib-cream md:hidden">
+        <img
+          src="/images/hero/hero-3.webp"
+          alt="GAIB Agro Baba Super Multi Crop Thresher hero banner"
+          className="block w-full"
+          loading="eager"
+        />
+        <div className="px-5 py-7">
+          <p className="inline-flex rounded-[8px] bg-[#f3c21b] px-3 py-1.5 font-display text-[0.72rem] font-extrabold uppercase tracking-[0.04em] text-black shadow-[0_10px_20px_rgb(216_163_26_/_0.24)]">
+            Govt. Subsidy Approved
+          </p>
+          <h2 className="hero-grit-title mt-3 font-display text-[2.85rem] font-black uppercase leading-[0.88]">
+            Thresher
+          </h2>
+          <p className="mt-3 max-w-sm font-display text-[1.05rem] font-medium leading-snug text-gaib-dark">
+            Direct from <span className="font-extrabold text-[#c20f16]">Manufacturer.</span> Built for{" "}
+            <span className="font-extrabold text-[#c20f16]">Farmers.</span>
+          </p>
+
+          <div className="mt-6 grid gap-3">
+            {featureItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="flex items-start gap-3 rounded-[16px] bg-white/88 p-3 shadow-sm">
+                  <span className="grid size-10 shrink-0 place-items-center rounded-full border border-gaib-dark/15 bg-gaib-cream text-gaib-dark">
+                    <Icon className="size-5 stroke-[2.2]" aria-hidden="true" />
+                  </span>
+                  <span>
+                    <span className="block font-display text-sm font-extrabold uppercase leading-tight text-gaib-dark">
+                      {item.title}
+                    </span>
+                    <span className="mt-1 block text-xs font-semibold leading-snug text-gaib-gray">{item.text}</span>
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="relative hidden min-h-[620px] md:block md:aspect-[1764/880] md:min-h-0">
         <img
           src="/images/hero/hero-3.webp"
           alt="GAIB Agro Baba Super Multi Crop Thresher hero banner"

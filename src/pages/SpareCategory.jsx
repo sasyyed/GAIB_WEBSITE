@@ -1,6 +1,6 @@
 import { FiCheckCircle } from "react-icons/fi";
 import { Link, useParams } from "react-router-dom";
-import SparePartCard from "../components/spares/SparePartCard";
+import SparePosterCard from "../components/spares/SparePosterCard";
 import Badge from "../components/ui/Badge";
 import Button from "../components/ui/Button";
 import Heading from "../components/ui/Heading";
@@ -20,6 +20,7 @@ const SpareCategory = () => {
   const { categorySlug } = useParams();
   const category = findSpareCategoryBySlug(categorySlug);
   const parts = category ? getSpareCategoryParts(category) : [];
+  const posters = category?.posters || [];
 
   usePageSeo({
     title: category ? `${category.title} | OEM Quality - GAIB Agro` : "Spare Parts Not Found | GAIB Agro",
@@ -55,7 +56,7 @@ const SpareCategory = () => {
               item: {
                 "@type": "Product",
                 name: partItem.name,
-                image: `${siteUrl}${partItem.image}`,
+                image: `${siteUrl}${category.image}`,
                 description: `${partItem.name} - ${partItem.badge}. ${spareIntro}`,
                 brand: {
                   "@type": "Brand",
@@ -94,7 +95,7 @@ const SpareCategory = () => {
         title={category.title}
         description={`${category.description} ${spareIntro}`}
         image={category.image}
-        imageAlt={`${category.title} image coming soon placeholder`}
+        imageAlt={`${category.title} by GAIB Agro`}
       />
 
       <Section className="bg-white">
@@ -121,16 +122,54 @@ const SpareCategory = () => {
           </div>
 
           <div className="grid gap-9">
-            {category.groups.map((group) => (
-              <div key={group.name}>
-                <Heading eyebrow={category.shortName} title={group.name} />
-                <div className="mt-7 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-                  {group.parts.map((partItem) => (
-                    <SparePartCard key={partItem.slug} part={partItem} />
-                  ))}
+            <div>
+              <Heading
+                eyebrow={category.shortName}
+                title="Grouped spare-parts photos."
+                description="Parts are shown together where the product artwork combines them, preserving the original photo ratio without stretching."
+              />
+              <div className="mt-7 grid gap-6 xl:grid-cols-2">
+                {posters.map((poster) => (
+                  <SparePosterCard
+                    key={poster.slug}
+                    poster={poster}
+                    to={`/contact?spare=${encodeURIComponent(poster.title)}`}
+                    ctaLabel="Enquire for these parts"
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <Heading
+                eyebrow="Part List"
+                title="Common parts in this category."
+                description="Share the part name, machine model and photo on enquiry for quick assistance."
+              />
+              <div className="mt-7 grid gap-5">
+                {category.groups.map((group) => (
+                  <article key={group.name} className="rounded-[20px] border border-gaib-dark/10 bg-white p-5 shadow-sm">
+                    <h3 className="font-display text-xl font-bold text-gaib-dark">{group.name}</h3>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {group.parts.map((partItem) => (
+                        <Link
+                          key={partItem.slug}
+                          to={`/contact?spare=${encodeURIComponent(partItem.name)}`}
+                          className="focus-ring rounded-full border border-gaib-dark/10 bg-gaib-cream px-4 py-2 text-sm font-bold text-gaib-green transition hover:border-gaib-gold hover:text-gaib-dark"
+                        >
+                          {partItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </article>
+                ))}
+                <div className="pt-1">
+                  <Button to="/contact" size="lg">
+                    Spare Parts Enquiry
+                  </Button>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </Section>

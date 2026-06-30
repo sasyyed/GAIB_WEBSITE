@@ -1,16 +1,16 @@
 import { FiCheckCircle, FiPackage, FiTool, FiTruck } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import SparePartCard from "../components/spares/SparePartCard";
+import SparePosterCard from "../components/spares/SparePosterCard";
 import Badge from "../components/ui/Badge";
 import Button from "../components/ui/Button";
 import Heading from "../components/ui/Heading";
 import PageHero from "../components/ui/PageHero";
 import Section from "../components/ui/Section";
 import {
-  allSpareParts,
   getSpareCategoryPath,
   spareCategories,
   spareIntro,
+  sparePosters,
 } from "../data/spares";
 import { usePageSeo } from "../hooks/usePageSeo";
 import { buildBreadcrumbSchema, siteUrl } from "../utils/seo";
@@ -39,7 +39,7 @@ const highlights = [
 ];
 
 const Spares = () => {
-  const featuredParts = allSpareParts.slice(0, 12);
+  const featuredPosters = sparePosters.slice(0, 9);
 
   usePageSeo({
     title: "Agricultural Implement Spare Parts | GAIB Agro Equipment",
@@ -89,8 +89,8 @@ const Spares = () => {
         eyebrow="Spares"
         title="OEM agricultural implement spare parts."
         description={spareIntro}
-        image="/images/spares/multi-crop-thresher-spare-parts.webp"
-        imageAlt="GAIB Agro spare parts image coming soon placeholder"
+        image="/images/spares/posters/elevator-bucket-conveyor-fasteners.webp"
+        imageAlt="GAIB Agro combined thresher spare parts poster"
       />
 
       <Section className="bg-white">
@@ -114,7 +114,7 @@ const Spares = () => {
         <Heading
           eyebrow="Categories"
           title="Spare parts by machine category."
-          description="Choose the machine category to view common OEM spare parts. Actual product photographs can replace these WebP placeholders later without changing filenames."
+          description="Choose the machine category to view grouped WebP spare-parts posters and common OEM part details."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {spareCategories.map((category) => (
@@ -123,11 +123,11 @@ const Spares = () => {
               to={getSpareCategoryPath(category)}
               className="focus-ring group overflow-hidden rounded-[22px] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-card"
             >
-              <div className="aspect-square bg-gaib-cream p-3">
+              <div className="bg-white p-2">
                 <img
                   src={category.image}
-                  alt={`${category.name} placeholder`}
-                  className="h-full w-full rounded-[18px] object-cover"
+                  alt={`${category.name} by GAIB Agro`}
+                  className="h-auto w-full rounded-[18px]"
                   loading="lazy"
                 />
               </div>
@@ -149,12 +149,16 @@ const Spares = () => {
       <Section className="bg-white">
         <Heading
           eyebrow="Popular Spares"
-          title="Multi Crop Thresher spare parts."
-          description="Power transmission, elevator system, shafts, cleaning unit, bearings and drum components for reliable field use."
+          title="Grouped spare-parts posters."
+          description="Combined photos are kept together as per the product artwork, so customers can identify related parts in one view."
         />
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {featuredParts.map((part) => (
-            <SparePartCard key={part.slug} part={part} />
+        <div className="mt-10 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+          {featuredPosters.map((poster) => (
+            <SparePosterCard
+              key={`${poster.categorySlug}-${poster.slug}`}
+              poster={poster}
+              to={getSpareCategoryPath({ slug: poster.categorySlug })}
+            />
           ))}
         </div>
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">

@@ -1,4 +1,5 @@
 const spareImage = (fileName) => `/images/spares/${fileName}.webp`;
+const posterImage = (fileName) => `/images/spares/posters/${fileName}.webp`;
 
 const part = (slug, name, category) => ({
   slug,
@@ -6,6 +7,14 @@ const part = (slug, name, category) => ({
   category,
   image: spareImage(slug),
   badge: "OEM Quality | Heavy Duty",
+});
+
+const poster = (slug, title, description, imageName, alt) => ({
+  slug,
+  title,
+  description,
+  image: posterImage(imageName),
+  alt,
 });
 
 export const spareIntro =
@@ -19,7 +28,51 @@ export const spareCategories = [
     title: "Multi Crop Thresher Spare Parts",
     description:
       "OEM spare parts for GAIB Multi Crop Thresher power transmission, elevator system, shafts, cleaning unit, bearings and drum components.",
-    image: spareImage("multi-crop-thresher-spare-parts"),
+    image: posterImage("elevator-bucket-conveyor-fasteners"),
+    posters: [
+      poster(
+        "thresher-elevator-bucket-conveyor-fasteners",
+        "Elevator Bucket, Conveyor Belt & Fasteners",
+        "Combined thresher elevator bucket, conveyor belt, bolt set and rivet nut spare parts for smooth grain handling.",
+        "elevator-bucket-conveyor-fasteners",
+        "GAIB thresher elevator bucket conveyor belt and fasteners spare parts",
+      ),
+      poster(
+        "thresher-cleaning-unit-sieves",
+        "Cleaning Unit & Crop Sieves",
+        "Multi crop, wheat, mustard, gram, soybean and custom size sieve options for better cleaning and separation.",
+        "cleaning-unit-sieves",
+        "GAIB cleaning unit and sieve spare parts for multi crop thresher",
+      ),
+      poster(
+        "thresher-bearings-units",
+        "Bearings, UCF, UCP & Pillow Blocks",
+        "Premium bearing units for agricultural machinery, threshers, blowers, gear boxes and processing machines.",
+        "bearings-units",
+        "GAIB bearings UCF UCP ball bearing and pillow block spare parts",
+      ),
+      poster(
+        "thresher-v-belts",
+        "V-Belts",
+        "Oil and heat resistant C142, C110, B86 and B121 V-belts for multi crop thresher and agricultural machinery.",
+        "v-belts",
+        "GAIB V-belts for multi crop thresher and agricultural machinery",
+      ),
+      poster(
+        "thresher-small-pulleys",
+        "Small Pulleys",
+        "Cast iron pulley sizes including 5x2C, 13x3C and 26x2C for heavy-duty power transmission.",
+        "small-pulleys",
+        "GAIB small pulleys spare parts for agricultural equipment",
+      ),
+      poster(
+        "thresher-balance-wheel",
+        "Balance Wheel",
+        "Balance wheel for multi crop thresher with top, side and bottom views for correct spare identification.",
+        "balance-wheel",
+        "GAIB balance wheel spare part for multi crop thresher",
+      ),
+    ],
     groups: [
       {
         name: "Power Transmission",
@@ -93,7 +146,16 @@ export const spareCategories = [
     title: "Seed Drill Spare Parts",
     description:
       "Precision replacement parts for seed drill and seed cum fertilizer drill machines, including seed metering and furrow placement components.",
-    image: spareImage("seed-drill-spare-parts"),
+    image: posterImage("seed-drill-cultivator-spares"),
+    posters: [
+      poster(
+        "seed-drill-cultivator-spares",
+        "Seed Drill Spare Parts",
+        "Combined seed drill spare parts panel including seed tube, seed boot, fluted roller, seed cup, sprockets, chain, gear box and bearing unit.",
+        "seed-drill-cultivator-spares",
+        "GAIB seed drill and cultivator spare parts combined poster",
+      ),
+    ],
     groups: [
       {
         name: "Popular Seed Drill Parts",
@@ -115,7 +177,16 @@ export const spareCategories = [
     title: "Cultivator Spare Parts",
     description:
       "Heavy-duty cultivator spare parts for rigid and spring loaded cultivators used in soil preparation and weed removal.",
-    image: spareImage("cultivator-spare-parts"),
+    image: posterImage("seed-drill-cultivator-spares"),
+    posters: [
+      poster(
+        "seed-drill-cultivator-spares",
+        "Cultivator Spare Parts",
+        "Combined cultivator spare parts panel including tine, tine shovel, spring tine, cultivator point, shank, clamp, bolt, spring, levelling board and depth adjuster.",
+        "seed-drill-cultivator-spares",
+        "GAIB cultivator spare parts combined poster",
+      ),
+    ],
     groups: [
       {
         name: "Popular Cultivator Parts",
@@ -137,7 +208,16 @@ export const spareCategories = [
     title: "Tractor Mounted Sprayer Spare Parts",
     description:
       "Reliable tractor mounted sprayer spare parts for HTP pump systems, hose reels, spray guns, nozzles and pressure control.",
-    image: spareImage("tractor-mounted-sprayer-spare-parts"),
+    image: posterImage("tractor-mounted-sprayer-spares"),
+    posters: [
+      poster(
+        "tractor-mounted-sprayer-spares",
+        "Tractor Mounted Sprayer Unit",
+        "Combined tractor mounted sprayer spare parts including HTP pump, hose pipe, brass gun, heavy-duty frame and 500 litre tank.",
+        "tractor-mounted-sprayer-spares",
+        "GAIB tractor mounted sprayer unit and spare parts poster",
+      ),
+    ],
     groups: [
       {
         name: "Popular Sprayer Parts",
@@ -159,7 +239,16 @@ export const spareCategories = [
     title: "Battery Knapsack Sprayer Spare Parts",
     description:
       "Replacement parts for battery knapsack sprayers, including pump, battery, charger, lance, nozzle and tank accessories.",
-    image: spareImage("battery-knapsack-sprayer-spare-parts"),
+    image: posterImage("battery-knapsack-sprayer-spares"),
+    posters: [
+      poster(
+        "battery-knapsack-sprayer-spares",
+        "Battery Knapsack Sprayer Spare Parts",
+        "Combined spare parts panel including spray lance, trigger gun, adjustable nozzle, double nozzle, fan nozzle, cone nozzle, filter, water pipe, battery, charger, shoulder belt and nozzle head.",
+        "battery-knapsack-sprayer-spares",
+        "GAIB battery knapsack sprayer spare parts poster",
+      ),
+    ],
     groups: [
       {
         name: "Popular Battery Sprayer Parts",
@@ -181,7 +270,30 @@ export const spareCategories = [
     title: "General Agricultural Implement Spare Parts",
     description:
       "General agricultural implement spare parts, fasteners, bearings, belts, pulleys and custom fabricated replacement parts.",
-    image: spareImage("general-spare-parts"),
+    image: posterImage("bearings-units"),
+    posters: [
+      poster(
+        "general-bearings-units",
+        "Bearings & Bearing Units",
+        "UCF, UCP, ball bearing and pillow block bearing units for agricultural machinery and industrial equipment.",
+        "bearings-units",
+        "GAIB bearing units and agricultural machinery bearings",
+      ),
+      poster(
+        "general-v-belts",
+        "V-Belts",
+        "Oil and heat resistant V-belts for tractors, threshers, water pumps and industrial machinery.",
+        "v-belts",
+        "GAIB V-belts spare parts for agricultural machinery",
+      ),
+      poster(
+        "general-small-pulleys",
+        "Small Pulleys",
+        "Painted cast iron pulley sizes for reliable agricultural equipment power transmission.",
+        "small-pulleys",
+        "GAIB small pulley spare parts",
+      ),
+    ],
     groups: [
       {
         name: "General Spare Parts",
@@ -205,6 +317,15 @@ export const getSpareCategoryParts = (category) =>
 
 export const allSpareParts = spareCategories.flatMap((category) =>
   getSpareCategoryParts(category).map((item) => ({ ...item, categorySlug: category.slug, categoryName: category.name })),
+);
+
+export const sparePosters = spareCategories.flatMap((category) =>
+  (category.posters || []).map((item) => ({
+    ...item,
+    categorySlug: category.slug,
+    categoryName: category.name,
+    categoryShortName: category.shortName,
+  })),
 );
 
 export const findSpareCategoryBySlug = (slug) => spareCategories.find((category) => category.slug === slug);

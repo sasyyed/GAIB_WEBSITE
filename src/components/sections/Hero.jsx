@@ -31,7 +31,7 @@ const Hero = () => {
 
       <div className="bg-gaib-cream md:hidden">
         <img
-          src="/images/hero/hero-3.webp"
+          src="/images/hero/hero-mobile-thresher.webp"
           alt="GAIB Agro Baba Super Multi Crop Thresher hero banner"
           className="block w-full"
           loading="eager"

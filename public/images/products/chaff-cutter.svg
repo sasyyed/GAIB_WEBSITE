@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">GAIB Chaff Cutter</title>
+  <desc id="desc">Illustration of a GAIB three roller chaff cutter.</desc>
+  <rect width="1200" height="900" fill="#fafaf7"/>
+  <path d="M0 684h1200v216H0z" fill="#0b5d2a"/>
+  <path d="M0 600c160 22 309 9 447-38 151-52 303-47 456 14 97 39 196 54 297 45v77H0z" fill="#d8a31a" opacity=".28"/>
+  <text x="160" y="170" font-family="Poppins, Arial, sans-serif" font-size="86" font-weight="800" fill="#0b5d2a">GAIB</text>
+  <text x="160" y="256" font-family="Poppins, Arial, sans-serif" font-size="74" font-weight="800" fill="#1b1b1b">CHAFF CUTTER</text>
+  <path d="M160 292h340" stroke="#d8a31a" stroke-width="18" stroke-linecap="round"/>
+  <g transform="translate(515 210)">
+    <rect x="92" y="230" width="415" height="222" rx="20" fill="#155bb4"/>
+    <rect x="124" y="172" width="230" height="92" rx="14" fill="#0873d1"/>
+    <path d="M352 196h230l-40 142H352z" fill="#0b5d2a"/>
+    <path d="M100 432h470" stroke="#1b1b1b" stroke-width="54" stroke-linecap="round"/>
+    <circle cx="176" cy="498" r="66" fill="#1b1b1b"/>
+    <circle cx="176" cy="498" r="29" fill="#d8a31a"/>
+    <circle cx="460" cy="498" r="66" fill="#1b1b1b"/>
+    <circle cx="460" cy="498" r="29" fill="#d8a31a"/>
+    <g transform="translate(254 340)">
+      <circle cx="0" cy="0" r="82" fill="#f5f5f5"/>
+      <circle cx="0" cy="0" r="26" fill="#d8a31a"/>
+      <path d="M0-76 19-19 76 0 19 19 0 76-19 19-76 0-19-19z" fill="#1b1b1b"/>
+    </g>
+    <path d="M40 145h115l40 85H72z" fill="#d8a31a"/>
+    <path d="M612 248c50 35 80 80 90 136" stroke="#d8a31a" stroke-width="20" stroke-linecap="round"/>
+  </g>
+  <text x="160" y="776" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Power operated three roller fodder cutting machine</text>
+</svg>

@@ -1,8 +1,5 @@
 @import "tailwindcss";
 @import "./theme.css";
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
 
 html {
   overflow-x: hidden;
@@ -62,16 +59,6 @@ img {
   margin-bottom: 1rem;
 }
 
-.swiper-pagination-bullet {
-  background: #ffffff;
-  opacity: 0.55;
-}
-
-.swiper-pagination-bullet-active {
-  background: #d8a31a;
-  opacity: 1;
-}
-
 .focus-ring {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -79,4 +66,23 @@ img {
 
 .focus-ring:focus-visible {
   outline-color: #d8a31a;
+}
+
+.hero-grit-title {
+  color: transparent;
+  background:
+    radial-gradient(circle at 12% 18%, rgb(255 255 255 / 0.62) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 35% 34%, rgb(255 255 255 / 0.48) 0 1.2px, transparent 1.8px),
+    radial-gradient(circle at 63% 22%, rgb(255 255 255 / 0.58) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 82% 66%, rgb(255 255 255 / 0.44) 0 1.3px, transparent 2px),
+    linear-gradient(#111111, #111111);
+  background-size: 17px 17px, 23px 23px, 29px 29px, 19px 19px, 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 5px 0 rgb(255 255 255 / 0.36)) drop-shadow(0 12px 18px rgb(0 0 0 / 0.14));
+}
+
+.hero-copy-shadow {
+  text-shadow: 0 2px 8px rgb(255 255 255 / 0.58), 0 1px 0 rgb(255 255 255 / 0.35);
 }

@@ -4,22 +4,22 @@ import Section from "../ui/Section";
 
 const testimonials = [
   {
-    name: "Ramesh Yadav",
-    location: "Farmer, Bundi",
+    name: "Rajesh Kumar",
+    location: "Farmer, Rajasthan",
     quote:
-      "The Baba Super Thresher has increased our harvesting speed significantly while reducing grain loss.",
+      "The Multi Crop Thresher from GAIB Agro reduced my labor cost and increased output. With SMAM subsidy, it became a practical investment.",
   },
   {
-    name: "Mahendra Singh",
-    location: "Farmer, Kota",
+    name: "Priya Singh",
+    location: "Women Farmer, Madhya Pradesh",
     quote:
-      "Low fuel consumption and easy operation. Best thresher we have used so far.",
+      "GAIB Agro's Seed Drill improved germination and saved seed. The government subsidy made it affordable and support was excellent.",
   },
   {
-    name: "Suresh Gurjar",
-    location: "Farmer, Chittorgarh",
+    name: "Vikram Patel",
+    location: "CHC Owner, Rajasthan",
     quote:
-      "Excellent build quality and support. GAIB Agro is a brand we can rely on.",
+      "We operate a Custom Hiring Centre. GAIB Agro equipment is durable, easy to maintain, and spare parts are always available.",
   },
 ];
 

@@ -14,7 +14,7 @@ const Factory = () => {
     <Section className="bg-white">
       <Heading
         title="Manufacturing Excellence"
-        description="Our manufacturing unit is equipped with advanced technology and skilled workforce to deliver world-class machinery."
+        description="Quality is built in from raw material to final inspection with CNC plasma cutting, hydraulic power press, CAD/CAM design, and rigorous quality testing."
         align="center"
       />
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

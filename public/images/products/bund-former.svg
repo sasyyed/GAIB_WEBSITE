@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">GAIB Bund Former</title>
+  <desc id="desc">Illustration of a GAIB bund former agricultural implement.</desc>
+  <rect width="1200" height="900" fill="#fafaf7"/>
+  <path d="M0 650h1200v250H0z" fill="#0b5d2a"/>
+  <path d="M0 626c179 39 341 28 486-34 136-59 285-66 449-18 83 24 171 34 265 29v47H0z" fill="#d8a31a" opacity=".28"/>
+  <path d="M195 194h210v50H195z" fill="#08431f"/>
+  <path d="M195 284h350v28H195z" fill="#d8a31a"/>
+  <text x="195" y="172" font-family="Poppins, Arial, sans-serif" font-size="86" font-weight="800" fill="#0b5d2a">GAIB</text>
+  <text x="195" y="255" font-family="Poppins, Arial, sans-serif" font-size="72" font-weight="800" fill="#1b1b1b">BUND FORMER</text>
+  <g transform="translate(515 226)">
+    <path d="M95 330h440l70 95H45z" fill="#155bb4"/>
+    <path d="M90 308h450v42H90z" fill="#0873d1"/>
+    <path d="M145 194h340v64H145z" fill="#0b66c3"/>
+    <path d="M180 126h270v74H180z" fill="#155bb4"/>
+    <path d="M240 52h150l60 85H180z" fill="#0873d1"/>
+    <path d="M96 350 7 520h182l46-170z" fill="#1b1b1b"/>
+    <path d="M536 350 625 520H443l-46-170z" fill="#1b1b1b"/>
+    <path d="M50 520h555" stroke="#0b5d2a" stroke-width="28" stroke-linecap="round"/>
+    <circle cx="188" cy="533" r="38" fill="#d8a31a"/>
+    <circle cx="450" cy="533" r="38" fill="#d8a31a"/>
+  </g>
+  <text x="195" y="764" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Adjustable three point linkage field bunding implement</text>
+</svg>

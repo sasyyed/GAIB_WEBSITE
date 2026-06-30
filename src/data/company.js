@@ -1,5 +1,5 @@
 export const company = {
-  name: "GAIB Agro Equipment Private Limited",
+  name: "GAIB Agro Equipment Pvt Ltd",
   shortName: "GAIB Agro",
   tagline: "Har Kisan Ki Bharosemand Pasand",
   englishTagline: "Farmers First Choice",
@@ -7,12 +7,16 @@ export const company = {
   phones: ["7976467105", "9460023752"],
   email: "agrogaib@gmail.com",
   website: "www.gaibagro.com",
-  websiteUrl: "https://www.gaibagro.com",
+  websiteUrl: "https://gaibagro.com",
   registeredAddress: "PN 27, near Reliance petrol pump, Silor Road, Bundi, Rajasthan",
   factoryAddress: "Near Tata Motors, near canal, NH52, Sathoor, Bundi, Rajasthan",
   whatsappNumber: "917976467105",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Near%20Tata%20Motors%20near%20canal%20NH52%20Sathoor%20Bundi%20Rajasthan",
+  mapsUrl: "https://share.google/ox2P4yOqNv7tSzAA9",
+  socialLinks: {
+    instagram: "https://www.instagram.com/gaibagro/",
+    youtube: "https://www.youtube.com/@GAIBAGRO",
+    facebook: "https://www.facebook.com/61575003951925/photos/",
+  },
 };
 
 export const companyContactLinks = {

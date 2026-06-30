@@ -1,28 +1,24 @@
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { getImageAlt, getImageSrc } from "../../data/products";
 
 const GallerySlider = ({ images, productName }) => {
   return (
-    <Swiper
-      modules={[Navigation, Pagination]}
-      navigation
-      pagination={{ clickable: true }}
-      spaceBetween={20}
-      className="overflow-hidden rounded-[24px] bg-white shadow-card"
-    >
-      {images.map((image, index) => (
-        <SwiperSlide key={image}>
-          <div className="aspect-[4/3] bg-gaib-cream">
+    <div className="grid gap-5">
+      {images.map((image, index) => {
+        const imageSrc = getImageSrc(image);
+        const imageAlt = getImageAlt(image, `${productName} view ${index + 1}`);
+
+        return (
+          <figure key={imageSrc} className="overflow-hidden rounded-[24px] bg-white p-3 shadow-card">
             <img
-              src={image}
-              alt={`${productName} view ${index + 1}`}
-              className="h-full w-full object-cover"
+              src={imageSrc}
+              alt={imageAlt}
+              className="aspect-[4/3] w-full object-contain"
               loading={index === 0 ? "eager" : "lazy"}
             />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          </figure>
+        );
+      })}
+    </div>
   );
 };
 

@@ -5,8 +5,9 @@ import { usePageSeo } from "../hooks/usePageSeo";
 
 const NotFound = () => {
   usePageSeo({
-    title: "Page Not Found",
+    title: "Page Not Found | GAIB Agro Equipment",
     description: "The requested GAIB Agro Equipment page could not be found.",
+    canonical: "/",
   });
 
   return (

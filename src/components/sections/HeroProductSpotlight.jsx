@@ -1,5 +1,5 @@
 import { FiCheckCircle } from "react-icons/fi";
-import { products } from "../../data/products";
+import { getImageSrc, getProductPath, products } from "../../data/products";
 import Button from "../ui/Button";
 import Section from "../ui/Section";
 
@@ -14,27 +14,58 @@ const benefits = [
 ];
 
 const HeroProductSpotlight = () => {
-  const product = products.find((item) => item.id === "baba-super-thresher");
+  const product = products.find((item) => item.id === "baba-super-multi-crop-thresher");
+  const supportingProducts = products.filter((item) =>
+    ["seed-cum-fertilizer-drill", "cultivator"].includes(item.id),
+  );
 
   return (
     <Section className="bg-[linear-gradient(90deg,#fbfbf5,#f1f5df)]">
       <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div className="rounded-[24px] bg-white p-7 shadow-card sm:p-9">
-          <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
-            Product Focus
-          </p>
-          <h3 className="mt-4 font-display text-3xl font-extrabold leading-tight text-gaib-dark">
-            Engineered for harvesting seasons where speed, strength, and clean output matter.
-          </h3>
-          <div className="mt-7 grid gap-4">
-            {product.specifications.slice(0, 5).map((item) => (
-              <div key={item.label} className="flex items-center justify-between gap-4 border-b border-gaib-dark/10 pb-3 text-sm last:border-b-0 last:pb-0">
-                <span className="font-bold text-gaib-dark">{item.label}</span>
-                <span className="text-right font-semibold text-gaib-gray">{item.value}</span>
+        <div>
+          <div className="overflow-hidden rounded-[24px] bg-white p-5 shadow-card sm:p-7">
+            <img
+              src={getImageSrc(product.image)}
+              alt={product.imageAlt || product.name}
+              className="aspect-[4/3] w-full object-contain"
+              loading="lazy"
+            />
+            <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
+                  Product Focus
+                </p>
+                <h3 className="mt-2 font-display text-2xl font-extrabold leading-tight text-gaib-dark">
+                  {product.name}
+                </h3>
               </div>
+              <Button to={getProductPath(product)} variant="secondary">
+                View More
+              </Button>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-5 sm:grid-cols-2">
+            {supportingProducts.map((item) => (
+              <article key={item.id} className="overflow-hidden rounded-[24px] bg-white p-4 shadow-card">
+                <img
+                  src={getImageSrc(item.image)}
+                  alt={item.imageAlt || item.name}
+                  className="aspect-[4/3] w-full object-contain"
+                  loading="lazy"
+                />
+                <div className="mt-4">
+                  <p className="text-xs font-bold uppercase tracking-[0.12em] text-gaib-green">{item.category}</p>
+                  <h3 className="mt-2 font-display text-xl font-extrabold text-gaib-dark">{item.name}</h3>
+                  <Button to={getProductPath(item)} variant="secondary" size="sm" className="mt-4">
+                    View More
+                  </Button>
+                </div>
+              </article>
             ))}
           </div>
         </div>
+
         <div>
           <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
             Our Hero Product
@@ -71,7 +102,7 @@ const HeroProductSpotlight = () => {
               </div>
             </div>
           </div>
-          <Button to={`/products/${product.id}`} variant="gold" className="mt-8">
+          <Button to={getProductPath(product)} variant="gold" className="mt-8">
             Request Price
           </Button>
         </div>

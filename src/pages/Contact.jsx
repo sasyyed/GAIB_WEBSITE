@@ -9,6 +9,7 @@ import Textarea from "../components/ui/Textarea";
 import { company, companyContactLinks } from "../data/company";
 import { products } from "../data/products";
 import { usePageSeo } from "../hooks/usePageSeo";
+import { buildBreadcrumbSchema, buildLocalBusinessSchema } from "../utils/seo";
 
 const contactCards = [
   {
@@ -46,10 +47,19 @@ const Contact = () => {
   }, [location.search]);
 
   usePageSeo({
-    title: "Contact",
+    title: "Contact GAIB Agro Equipment | Agricultural Equipment Manufacturer Contact",
     description:
-      "Contact GAIB Agro Equipment Private Limited for product quotes, dealer inquiries, service, and WhatsApp assistance.",
+      "Contact GAIB Agro Equipment Pvt Ltd in Bundi, Rajasthan for agricultural equipment price quotes, dealer inquiries, service support and WhatsApp assistance.",
     image: "/images/gallery/factory-floor.svg",
+    canonical: "/contact/",
+    keywords: ["agricultural equipment manufacturer contact", "GAIB Agro contact", "farm equipment quote", "Bundi agricultural equipment manufacturer"],
+    structuredData: [
+      buildBreadcrumbSchema([
+        { name: "Home", url: "/" },
+        { name: "Contact", url: "/contact/" },
+      ]),
+      buildLocalBusinessSchema(),
+    ],
   });
 
   const handleSubmit = (event) => {
@@ -63,7 +73,7 @@ const Contact = () => {
         eyebrow="Contact"
         title="Speak with GAIB Agro Equipment."
         description={`${company.englishTagline}. ${company.promise}`}
-        image="/images/products/baba-super-multi-crop-thresher.jpg"
+        image="/images/products/baba-super-multi-crop-thresher-square.webp"
         imageAlt="Baba Super Multi Crop Thresher"
       />
       <Section className="bg-white">

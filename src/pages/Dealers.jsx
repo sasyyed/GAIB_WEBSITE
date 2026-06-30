@@ -6,6 +6,7 @@ import PageHero from "../components/ui/PageHero";
 import Section from "../components/ui/Section";
 import Textarea from "../components/ui/Textarea";
 import { usePageSeo } from "../hooks/usePageSeo";
+import { buildBreadcrumbSchema } from "../utils/seo";
 
 const dealerBenefits = [
   {
@@ -34,10 +35,16 @@ const Dealers = () => {
   const [submitted, setSubmitted] = useState(false);
 
   usePageSeo({
-    title: "Dealers",
+    title: "GAIB Agro Dealership Opportunity | Agricultural Equipment Dealer India",
     description:
-      "Become a GAIB Agro Equipment dealer and partner with a focused agricultural equipment brand.",
-    image: "/images/gallery/workshop-line.svg",
+      "Become a GAIB Agro Equipment dealer and partner with an agricultural equipment manufacturer offering threshers, seed drills, cultivators and farm implements.",
+    image: "/images/pages/dealership.webp",
+    canonical: "/dealers/",
+    keywords: ["GAIB Agro dealership", "agricultural equipment dealer India", "farm equipment dealership", "tractor implement dealership"],
+    structuredData: buildBreadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "Dealers", url: "/dealers/" },
+    ]),
   });
 
   const handleSubmit = (event) => {
@@ -51,8 +58,8 @@ const Dealers = () => {
         eyebrow="Dealers"
         title="Partner with GAIB Agro Equipment."
         description="Dealer inquiries are welcomed from businesses that understand farmers, service, and regional agricultural demand."
-        image="/images/gallery/workshop-line.svg"
-        imageAlt="GAIB workshop production line"
+        image="/images/pages/dealership.webp"
+        imageAlt="GAIB Agro Equipment dealership opportunity"
       />
       <Section className="bg-white">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

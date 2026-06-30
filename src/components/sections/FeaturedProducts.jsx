@@ -8,16 +8,14 @@ const FeaturedProducts = () => {
     <Section className="bg-gaib-cream">
       <Heading
         eyebrow="Products"
-        title="Field-ready machines, refined for serious work."
-        description="Explore the primary GAIB range built around harvest, sowing, and soil preparation needs."
+        title="Our agricultural equipment products."
+        description="Explore GAIB Agro implements for threshing, sowing, tillage, spraying, fodder, land preparation and transport."
         align="center"
       />
       <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {products
-          .filter((product) => product.featured)
-          .map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </div>
     </Section>
   );

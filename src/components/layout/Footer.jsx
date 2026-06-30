@@ -1,17 +1,28 @@
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FiGlobe, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { company, companyContactLinks } from "../../data/company";
-import { products } from "../../data/products";
+import { getProductPath, products } from "../../data/products";
 import Container from "../ui/Container";
 
 const quickLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
   { label: "Products", to: "/products" },
-  { label: "Why Choose Us", to: "/#why-choose" },
+  { label: "Spares", to: "/spares" },
+  { label: "Subsidy", to: "/government-subsidy" },
+  { label: "Jobs", to: "/jobs" },
   { label: "Gallery", to: "/gallery" },
   { label: "Dealers", to: "/dealers" },
+  { label: "Blog", to: "/blog" },
+  { label: "FAQ", to: "/faq" },
   { label: "Contact Us", to: "/contact" },
+];
+
+const socialLinks = [
+  { label: "Instagram", href: company.socialLinks.instagram, icon: FaInstagram },
+  { label: "YouTube", href: company.socialLinks.youtube, icon: FaYoutube },
+  { label: "Facebook", href: company.socialLinks.facebook, icon: FaFacebookF },
 ];
 
 const Footer = () => {
@@ -20,21 +31,36 @@ const Footer = () => {
   return (
     <footer className="bg-white text-gaib-dark">
       <Container className="py-12">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.7fr_0.8fr_1.1fr_0.75fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.65fr_0.75fr_1fr_1fr]">
           <div>
-            <Link to="/" className="focus-ring inline-flex items-center gap-3 rounded-full">
-              <img src="/images/logo/gaib-logo.svg" alt="GAIB Agro Equipment logo" className="h-16 w-16" />
-              <span>
-                <span className="block font-display text-2xl font-extrabold text-gaib-green">
-                  {company.shortName}
-                </span>
-                <span className="text-sm font-semibold text-gaib-dark">{company.tagline}</span>
-              </span>
+            <Link to="/" className="focus-ring inline-flex items-center rounded-md">
+              <img
+                src="/images/logo/gaib-logo.webp"
+                alt="GAIB Agro Equipment Pvt Ltd Logo - Agricultural Equipment Manufacturer India"
+                className="h-20 w-auto object-contain"
+              />
             </Link>
             <p className="mt-6 max-w-sm leading-8 text-gaib-gray">
               {company.name} is dedicated to empowering farmers with high quality, reliable,
               and innovative agricultural machinery.
             </p>
+            <div className="mt-6 flex gap-3" aria-label="Social media links">
+              {socialLinks.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="focus-ring flex size-10 items-center justify-center rounded-full bg-gaib-green text-white hover:bg-gaib-gold hover:text-gaib-dark"
+                    aria-label={item.label}
+                  >
+                    <Icon className="size-4" aria-hidden="true" />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           <div>
@@ -54,7 +80,7 @@ const Footer = () => {
               {footerProducts.map((product) => (
                 <Link
                   key={product.id}
-                  to={`/products/${product.id}`}
+                  to={getProductPath(product)}
                   className="focus-ring w-fit rounded-full text-gaib-gray hover:text-gaib-green"
                 >
                   {product.name}
@@ -95,9 +121,9 @@ const Footer = () => {
               href={company.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="focus-ring mt-5 block overflow-hidden rounded-[8px] border border-gaib-green/20 bg-gaib-cream p-3 shadow-sm"
+              className="focus-ring mt-5 block overflow-hidden rounded-[8px] border border-gaib-green/20 bg-white p-4 shadow-sm"
             >
-              <img src="/images/icons/scan-to-locate-us.png" alt="Scan to locate GAIB Agro Equipment" className="w-full" loading="lazy" />
+              <img src="/images/icons/scan-to-locate-us.png" alt="Scan to locate GAIB Agro Equipment" className="mx-auto w-full max-w-56" loading="lazy" />
             </a>
           </div>
         </div>

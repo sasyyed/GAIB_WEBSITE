@@ -4,15 +4,33 @@ import PageHero from "../components/ui/PageHero";
 import Section from "../components/ui/Section";
 import { galleryImages } from "../data/products";
 import { usePageSeo } from "../hooks/usePageSeo";
+import { buildBreadcrumbSchema } from "../utils/seo";
+
+const galleryVideos = [
+  {
+    title: "GAIB Agro Equipment Video 1",
+    src: "https://www.youtube.com/embed/sb-pNffw0j8?si=JFDi-czGU7Q5F2aW",
+  },
+  {
+    title: "GAIB Agro Equipment Video 2",
+    src: "https://www.youtube.com/embed/zkT_I4qchKM?si=4gylTuZxXF1EvApe",
+  },
+];
 
 const Gallery = () => {
   const [activeImage, setActiveImage] = useState(null);
 
   usePageSeo({
-    title: "Gallery",
+    title: "GAIB Agro Equipment Gallery | Product Photos & Videos",
     description:
-      "View GAIB Agro Equipment product, factory, and manufacturing gallery visuals.",
+      "View GAIB Agro Equipment product photos, factory visuals and videos of threshers, seed drills, cultivators, sprayers and agricultural implements.",
     image: "/images/gallery/factory-floor.svg",
+    canonical: "/gallery/",
+    keywords: ["GAIB Agro gallery", "agricultural equipment photos", "farm machinery videos", "GAIB Agro product images"],
+    structuredData: buildBreadcrumbSchema([
+      { name: "Home", url: "/" },
+      { name: "Gallery", url: "/gallery/" },
+    ]),
   });
 
   useEffect(() => {
@@ -33,6 +51,40 @@ const Gallery = () => {
         imageAlt="GAIB workshop line"
       />
       <Section className="bg-white">
+        <div className="mb-10">
+          <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
+            Videos
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold text-gaib-dark sm:text-4xl">
+            Watch GAIB Agro Equipment in action.
+          </h2>
+        </div>
+        <div className="grid gap-6 lg:grid-cols-2">
+          {galleryVideos.map((video) => (
+            <article key={video.src} className="overflow-hidden rounded-[24px] bg-gaib-cream shadow-card">
+              <iframe
+                src={video.src}
+                title={video.title}
+                className="aspect-video w-full"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+              <h3 className="px-5 py-4 font-display text-lg font-bold text-gaib-dark">{video.title}</h3>
+            </article>
+          ))}
+        </div>
+      </Section>
+      <Section className="bg-white">
+        <div className="mb-10">
+          <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
+            Photos
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold text-gaib-dark sm:text-4xl">
+            Product and manufacturing gallery.
+          </h2>
+        </div>
         <div className="masonry">
           {galleryImages.map((image, index) => (
             <button

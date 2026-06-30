@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Badge from "./Badge";
 import Container from "./Container";
 
@@ -6,11 +5,7 @@ const PageHero = ({ eyebrow, title, description, image, imageAlt, dark = false }
   return (
     <section className={`${dark ? "bg-gaib-dark text-white" : "bg-gaib-cream text-gaib-dark"} pt-28`}>
       <Container className="grid gap-10 py-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-20">
-        <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: "easeOut" }}
-        >
+        <div>
           {eyebrow ? (
             <Badge className={dark ? "border-white/15 bg-white/10 text-white" : ""}>{eyebrow}</Badge>
           ) : null}
@@ -22,16 +17,11 @@ const PageHero = ({ eyebrow, title, description, image, imageAlt, dark = false }
               {description}
             </p>
           ) : null}
-        </motion.div>
+        </div>
         {image ? (
-          <motion.div
-            className="overflow-hidden rounded-[24px] bg-white shadow-card"
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.55, ease: "easeOut", delay: 0.1 }}
-          >
-            <img src={image} alt={imageAlt || title} className="aspect-[16/10] w-full object-cover" loading="eager" />
-          </motion.div>
+          <div className="grid aspect-[3/2] place-items-center overflow-hidden rounded-[24px] bg-white p-3 shadow-card">
+            <img src={image} alt={imageAlt || title} className="max-h-full max-w-full object-contain" loading="eager" />
+          </div>
         ) : null}
       </Container>
     </section>

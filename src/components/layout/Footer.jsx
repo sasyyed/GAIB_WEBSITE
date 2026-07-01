@@ -37,7 +37,11 @@ const Footer = () => {
               <img
                 src="/images/logo/gaib-logo.webp"
                 alt="GAIB Agro Equipment Pvt Ltd Logo - Agricultural Equipment Manufacturer India"
+                width="420"
+                height="176"
                 className="h-20 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </Link>
             <p className="mt-6 max-w-sm leading-8 text-gaib-gray">

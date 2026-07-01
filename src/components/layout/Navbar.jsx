@@ -57,7 +57,17 @@ const Navbar = () => {
   const labels = translations[language] || translations.en;
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 24);
+    let ticking = false;
+    const updateScrollState = () => {
+      setScrolled(window.scrollY > 24);
+      ticking = false;
+    };
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateScrollState);
+      }
+    };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -84,7 +94,10 @@ const Navbar = () => {
             <img
               src="/images/logo/gaib-logo.webp"
               alt="GAIB Agro Equipment Pvt Ltd Logo - Agricultural Equipment Manufacturer India"
+              width="420"
+              height="176"
               className="h-12 w-auto object-contain sm:h-14"
+              decoding="async"
             />
           </Link>
 

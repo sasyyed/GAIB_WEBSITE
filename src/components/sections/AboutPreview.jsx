@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Button from "../ui/Button";
 import Heading from "../ui/Heading";
 import Section from "../ui/Section";
@@ -12,12 +11,8 @@ const AboutPreview = () => {
           title="GAIB Agro Equipment Private Limited"
           description="A modern agricultural equipment company focused on dependable manufacturing, product clarity, and long-term farmer trust."
         />
-        <motion.div
+        <div
           className="rounded-[24px] bg-white p-7 shadow-card"
-          initial={{ opacity: 0, x: 24 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.55 }}
         >
           <p className="text-xl font-semibold leading-9 text-gaib-dark">
             Premium machines. Clear specifications. Practical service. A website built around the
@@ -33,7 +28,7 @@ const AboutPreview = () => {
           <Button to="/about" className="mt-8">
             About GAIB
           </Button>
-        </motion.div>
+        </div>
       </div>
     </Section>
   );

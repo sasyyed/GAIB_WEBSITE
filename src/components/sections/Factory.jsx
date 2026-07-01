@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Heading from "../ui/Heading";
 import Section from "../ui/Section";
 
@@ -18,17 +17,13 @@ const Factory = () => {
         align="center"
       />
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {factoryImages.map((image, index) => (
-          <motion.figure
+        {factoryImages.map((image) => (
+          <figure
             key={image.src}
             className="overflow-hidden rounded-[8px] bg-gaib-cream shadow-card"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.45, delay: index * 0.05 }}
           >
             <img src={image.src} alt={image.alt} className="aspect-[4/3] w-full object-cover" loading="lazy" />
-          </motion.figure>
+          </figure>
         ))}
       </div>
     </Section>

@@ -10,6 +10,7 @@ import { company, companyContactLinks } from "../data/company";
 import { products } from "../data/products";
 import { usePageSeo } from "../hooks/usePageSeo";
 import { buildBreadcrumbSchema, buildLocalBusinessSchema } from "../utils/seo";
+import { isWeb3FormsConfigured, submitWeb3Form } from "../utils/web3forms";
 
 const contactCards = [
   {
@@ -40,10 +41,29 @@ const contactCards = [
 
 const Contact = () => {
   const location = useLocation();
-  const [submitted, setSubmitted] = useState(false);
+  const [formStatus, setFormStatus] = useState({ state: "idle", message: "" });
+  const searchParams = useMemo(() => new URLSearchParams(location.search), [location.search]);
   const selectedProduct = useMemo(() => {
+    return products.find((product) => product.id === searchParams.get("product"));
+  }, [searchParams]);
+  const selectedSpare = useMemo(() => searchParams.get("spare") || "", [searchParams]);
+  const interestValue = selectedProduct?.name || selectedSpare;
+
+  const enquiryType = useMemo(() => {
+    if (selectedSpare) return "Spare Parts Enquiry";
+    if (selectedProduct) return "Product Quote Enquiry";
+    return "Website Quote Enquiry";
+  }, [selectedProduct, selectedSpare]);
+  const web3FormType = selectedProduct || selectedSpare ? "product" : "contact";
+
+  const selectedNotice = useMemo(() => {
     const params = new URLSearchParams(location.search);
-    return products.find((product) => product.id === params.get("product"));
+    const product = products.find((item) => item.id === params.get("product"));
+    const spare = params.get("spare");
+
+    if (product) return `Selected product: ${product.name}`;
+    if (spare) return `Selected spare part: ${spare}`;
+    return "";
   }, [location.search]);
 
   usePageSeo({
@@ -62,9 +82,44 @@ const Contact = () => {
     ],
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
+    const form = event.currentTarget;
+
+    if (!isWeb3FormsConfigured(web3FormType)) {
+      setFormStatus({
+        state: "error",
+        message: "Online email enquiry is almost ready. Please add the Web3Forms access key in Cloudflare.",
+      });
+      return;
+    }
+
+    setFormStatus({ state: "submitting", message: "Sending your enquiry..." });
+
+    try {
+      await submitWeb3Form({
+        form,
+        formType: web3FormType,
+        subject: `GAIB Agro - ${enquiryType}`,
+        source: "Contact page",
+        extraData: {
+          page_url: window.location.href,
+          selected_product: selectedProduct?.name,
+          spare_part: selectedSpare,
+        },
+      });
+
+      form.reset();
+      setFormStatus({
+        state: "success",
+        message: "Thank you. Your enquiry has been sent to GAIB Agro. Our team will contact you soon.",
+      });
+    } catch (error) {
+      setFormStatus({
+        state: "error",
+        message: error.message || "Unable to send enquiry right now. Please try WhatsApp or call us.",
+      });
+    }
   };
 
   return (
@@ -132,16 +187,23 @@ const Contact = () => {
 
           <form className="rounded-[24px] bg-white p-6 shadow-card sm:p-8" onSubmit={handleSubmit}>
             <h2 className="font-display text-3xl font-bold text-gaib-dark">Request a quote</h2>
-            {selectedProduct ? (
+            {selectedNotice ? (
               <p className="mt-3 rounded-2xl bg-gaib-green/10 px-4 py-3 text-sm font-semibold text-gaib-green">
-                Selected product: {selectedProduct.name}
+                {selectedNotice}
               </p>
             ) : null}
-            {submitted ? (
-              <div className="mt-5 rounded-2xl bg-gaib-green/10 p-5 text-gaib-green" role="status">
-                Thank you. Your inquiry has been noted.
+            {formStatus.message ? (
+              <div
+                className={`mt-5 rounded-2xl p-5 font-semibold ${
+                  formStatus.state === "error" ? "bg-red-50 text-red-700" : "bg-gaib-green/10 text-gaib-green"
+                }`}
+                role="status"
+              >
+                {formStatus.message}
               </div>
             ) : null}
+            <input type="checkbox" name="botcheck" className="hidden" tabIndex="-1" autoComplete="off" />
+            <input type="hidden" name="enquiry_type" value={enquiryType} />
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <Input id="name" label="Name" name="name" autoComplete="name" required />
               <Input id="phone" label="Phone" name="phone" type="tel" autoComplete="tel" required />
@@ -150,15 +212,15 @@ const Contact = () => {
                 id="product"
                 label="Product Interest"
                 name="product"
-                defaultValue={selectedProduct?.name || ""}
+                defaultValue={interestValue}
               />
               <div className="sm:col-span-2">
                 <Textarea id="message" label="Message" name="message" required />
               </div>
             </div>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Button type="submit" size="lg">
-                Send Inquiry
+              <Button type="submit" size="lg" disabled={formStatus.state === "submitting"}>
+                {formStatus.state === "submitting" ? "Sending..." : "Send Inquiry"}
               </Button>
               <Button href={companyContactLinks.whatsapp} target="_blank" rel="noreferrer" variant="secondary" size="lg">
                 WhatsApp

@@ -9,6 +9,7 @@ import { company, companyContactLinks } from "../data/company";
 import { products } from "../data/products";
 import { usePageSeo } from "../hooks/usePageSeo";
 import { buildBreadcrumbSchema } from "../utils/seo";
+import { isWeb3FormsConfigured, submitWeb3Form } from "../utils/web3forms";
 
 const exportPoints = [
   "Agricultural equipment export enquiry",
@@ -18,7 +19,7 @@ const exportPoints = [
 ];
 
 const ExportEnquiry = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [formStatus, setFormStatus] = useState({ state: "idle", message: "" });
 
   usePageSeo({
     title: "Export Enquiry | GAIB Agro Equipment Pvt Ltd",
@@ -39,9 +40,42 @@ const ExportEnquiry = () => {
     ]),
   });
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
+    const form = event.currentTarget;
+
+    if (!isWeb3FormsConfigured("export")) {
+      setFormStatus({
+        state: "error",
+        message: "Online email enquiry is almost ready. Please add the Web3Forms access key in Cloudflare.",
+      });
+      return;
+    }
+
+    setFormStatus({ state: "submitting", message: "Sending your export enquiry..." });
+
+    try {
+      await submitWeb3Form({
+        form,
+        formType: "export",
+        subject: "GAIB Agro - Export Enquiry",
+        source: "Export enquiry page",
+        extraData: {
+          page_url: window.location.href,
+        },
+      });
+
+      form.reset();
+      setFormStatus({
+        state: "success",
+        message: "Thank you. Your export enquiry has been sent to GAIB Agro. Our team will contact you soon.",
+      });
+    } catch (error) {
+      setFormStatus({
+        state: "error",
+        message: error.message || "Unable to send export enquiry right now. Please try WhatsApp or email.",
+      });
+    }
   };
 
   return (
@@ -89,11 +123,18 @@ const ExportEnquiry = () => {
 
           <form className="rounded-[24px] bg-gaib-cream p-6 shadow-card sm:p-8" onSubmit={handleSubmit}>
             <h2 className="font-display text-3xl font-bold text-gaib-dark">Export enquiry form</h2>
-            {submitted ? (
-              <div className="mt-5 rounded-2xl bg-gaib-green/10 p-5 text-gaib-green" role="status">
-                Thank you. Your export enquiry has been noted.
+            {formStatus.message ? (
+              <div
+                className={`mt-5 rounded-2xl p-5 font-semibold ${
+                  formStatus.state === "error" ? "bg-red-50 text-red-700" : "bg-gaib-green/10 text-gaib-green"
+                }`}
+                role="status"
+              >
+                {formStatus.message}
               </div>
             ) : null}
+            <input type="checkbox" name="botcheck" className="hidden" tabIndex="-1" autoComplete="off" />
+            <input type="hidden" name="enquiry_type" value="Export Enquiry" />
             <div className="mt-6 grid gap-5 sm:grid-cols-2">
               <Input id="export-name" label="Name" name="name" autoComplete="name" required />
               <Input id="export-company" label="Company Name" name="company" autoComplete="organization" />
@@ -123,8 +164,8 @@ const ExportEnquiry = () => {
               </div>
             </div>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Button type="submit" size="lg">
-                Send Export Enquiry
+              <Button type="submit" size="lg" disabled={formStatus.state === "submitting"}>
+                {formStatus.state === "submitting" ? "Sending..." : "Send Export Enquiry"}
               </Button>
               <Button href={companyContactLinks.whatsapp} target="_blank" rel="noreferrer" variant="secondary" size="lg" icon={FiMessageCircle}>
                 WhatsApp

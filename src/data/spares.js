@@ -6,7 +6,7 @@ const part = (slug, name, category) => ({
   name,
   category,
   image: spareImage(slug),
-  badge: "OEM Quality | Heavy Duty",
+  badge: "Genuine Quality | Heavy Duty",
 });
 
 const poster = (slug, title, description, imageName, alt) => ({
@@ -18,7 +18,7 @@ const poster = (slug, title, description, imageName, alt) => ({
 });
 
 export const spareIntro =
-  "OEM quality agricultural implement spare parts manufactured by GAIB AGRO EQUIPMENT PVT. LTD. Precision engineered, durable and suitable for reliable field performance. Custom sizes available.";
+  "Genuine agricultural implement spare parts manufactured by GAIB AGRO EQUIPMENT PVT. LTD. Precision engineered, durable and suitable for reliable field performance. Custom sizes available.";
 
 export const spareCategories = [
   {
@@ -27,7 +27,7 @@ export const spareCategories = [
     shortName: "Multi Crop Thresher",
     title: "Multi Crop Thresher Spare Parts",
     description:
-      "OEM spare parts for GAIB Multi Crop Thresher power transmission, elevator system, shafts, cleaning unit, bearings and drum components.",
+      "Genuine spare parts for GAIB Multi Crop Thresher power transmission, elevator system, shafts, cleaning unit, bearings and drum components.",
     image: posterImage("elevator-bucket-conveyor-fasteners"),
     posters: [
       poster(

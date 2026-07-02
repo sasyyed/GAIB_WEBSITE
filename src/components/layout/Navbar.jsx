@@ -52,9 +52,16 @@ const translations = {
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
+  const [mobileContactOpen, setMobileContactOpen] = useState(false);
   const [language, setLanguage] = useState(() => localStorage.getItem("gaib-language") || "en");
   const location = useLocation();
   const labels = translations[language] || translations.en;
+  const closeMobileMenu = () => {
+    setMenuOpen(false);
+    setMobileProductsOpen(false);
+    setMobileContactOpen(false);
+  };
 
   useEffect(() => {
     let ticking = false;
@@ -75,7 +82,22 @@ const Navbar = () => {
 
   useEffect(() => {
     setMenuOpen(false);
+    setMobileProductsOpen(false);
+    setMobileContactOpen(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      return undefined;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     document.documentElement.lang = language === "hi" ? "hi-IN" : "en-IN";
@@ -239,7 +261,7 @@ const Navbar = () => {
 
           <button
             type="button"
-            className="focus-ring inline-flex size-11 items-center justify-center rounded-full bg-gaib-green text-white xl:hidden"
+            className="focus-ring inline-flex size-11 touch-manipulation items-center justify-center rounded-full bg-gaib-green text-white xl:hidden"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((open) => !open)}
@@ -251,13 +273,14 @@ const Navbar = () => {
 
       {menuOpen ? (
         <div className="mt-3 border-t border-gaib-dark/10 bg-white xl:hidden">
-          <Container className="py-5">
+          <Container className="max-h-[calc(100vh-5.75rem)] overflow-y-auto overscroll-contain py-5">
             <div className="grid gap-2">
               <NavLink
                 to="/"
+                onClick={closeMobileMenu}
                 className={({ isActive }) =>
                   `focus-ring rounded-2xl px-4 py-3 font-semibold ${
-                    isActive ? "bg-gaib-green text-white" : "text-gaib-dark hover:bg-gaib-cream"
+                    isActive ? "bg-gaib-green text-white" : "text-gaib-dark active:bg-gaib-cream"
                   }`
                 }
               >
@@ -265,29 +288,50 @@ const Navbar = () => {
               </NavLink>
 
               <div className="rounded-2xl bg-gaib-cream p-3">
-                <Link to="/products" className="focus-ring block rounded-xl px-3 py-2 font-display font-bold uppercase text-gaib-green">
-                  {labels.products}
-                </Link>
-                <div className="mt-1 grid gap-1">
-                  {products.map((product) => (
+                <button
+                  type="button"
+                  className="focus-ring flex w-full touch-manipulation items-center justify-between rounded-xl px-3 py-2 text-left font-display font-bold uppercase text-gaib-green active:bg-white"
+                  aria-expanded={mobileProductsOpen}
+                  aria-controls="mobile-products-menu"
+                  onClick={() => setMobileProductsOpen((open) => !open)}
+                >
+                  <span>{labels.products}</span>
+                  <FiChevronDown
+                    className={`size-5 transition duration-200 ${mobileProductsOpen ? "rotate-180" : ""}`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {mobileProductsOpen ? (
+                  <div id="mobile-products-menu" className="mt-2 grid gap-1">
+                    <Link
+                      to="/products"
+                      onClick={closeMobileMenu}
+                      className="focus-ring rounded-xl bg-white px-3 py-2 text-sm font-extrabold uppercase tracking-[0.06em] text-gaib-green"
+                    >
+                      {labels.allProducts}
+                    </Link>
+                    {products.map((product) => (
                     <Link
                       key={product.id}
                       to={getProductPath(product)}
-                      className="focus-ring rounded-xl px-3 py-2 text-sm font-semibold text-gaib-dark hover:bg-white"
+                      onClick={closeMobileMenu}
+                      className="focus-ring rounded-xl px-3 py-2 text-sm font-semibold text-gaib-dark active:bg-white"
                     >
                       {product.seoName || product.name}
                     </Link>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : null}
               </div>
 
               <NavLink
                 to="/spares"
+                onClick={closeMobileMenu}
                 className={({ isActive }) =>
                   `focus-ring rounded-2xl px-4 py-3 font-semibold ${
                     isActive || location.pathname.startsWith("/spares")
                       ? "bg-gaib-green text-white"
-                      : "text-gaib-dark hover:bg-gaib-cream"
+                      : "text-gaib-dark active:bg-gaib-cream"
                   }`
                 }
               >
@@ -298,9 +342,10 @@ const Navbar = () => {
                 <NavLink
                   key={item.to}
                   to={item.to}
+                  onClick={closeMobileMenu}
                   className={({ isActive }) =>
                     `focus-ring rounded-2xl px-4 py-3 font-semibold ${
-                      isActive ? "bg-gaib-green text-white" : "text-gaib-dark hover:bg-gaib-cream"
+                      isActive ? "bg-gaib-green text-white" : "text-gaib-dark active:bg-gaib-cream"
                     }`
                   }
                 >
@@ -309,15 +354,37 @@ const Navbar = () => {
               ))}
 
               <div className="rounded-2xl bg-gaib-cream p-3">
-                <Link to="/contact" className="focus-ring block rounded-xl px-3 py-2 font-display font-bold uppercase text-gaib-green">
-                  {labels.contact}
-                </Link>
-                <Link
-                  to="/export-enquiry"
-                  className="focus-ring mt-1 block rounded-xl px-3 py-2 text-sm font-semibold text-gaib-dark hover:bg-white"
+                <button
+                  type="button"
+                  className="focus-ring flex w-full touch-manipulation items-center justify-between rounded-xl px-3 py-2 text-left font-display font-bold uppercase text-gaib-green active:bg-white"
+                  aria-expanded={mobileContactOpen}
+                  aria-controls="mobile-contact-menu"
+                  onClick={() => setMobileContactOpen((open) => !open)}
                 >
-                  {labels.export}
-                </Link>
+                  <span>{labels.contact}</span>
+                  <FiChevronDown
+                    className={`size-5 transition duration-200 ${mobileContactOpen ? "rotate-180" : ""}`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {mobileContactOpen ? (
+                  <div id="mobile-contact-menu" className="mt-2 grid gap-1">
+                    <Link
+                      to="/contact"
+                      onClick={closeMobileMenu}
+                      className="focus-ring rounded-xl bg-white px-3 py-2 text-sm font-semibold text-gaib-dark"
+                    >
+                      {labels.contact}
+                    </Link>
+                    <Link
+                      to="/export-enquiry"
+                      onClick={closeMobileMenu}
+                      className="focus-ring rounded-xl px-3 py-2 text-sm font-semibold text-gaib-dark active:bg-white"
+                    >
+                      {labels.export}
+                    </Link>
+                  </div>
+                ) : null}
               </div>
               <div className="flex items-center gap-2 rounded-2xl bg-gaib-cream p-3">
                 <span className="text-sm font-bold text-gaib-dark">Language</span>

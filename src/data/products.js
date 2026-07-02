@@ -745,6 +745,18 @@ export const galleryImages = [
     title: "Tractor Trolley",
   },
   {
+    src: "/images/gallery/manufacturing-excellence-1.webp",
+    alt: "GAIB Agro manufacturing excellence workshop operations",
+    title: "Manufacturing Excellence",
+    layout: "wide",
+  },
+  {
+    src: "/images/gallery/manufacturing-excellence-2.webp",
+    alt: "GAIB Agro manufacturing excellence thresher assembly and components",
+    title: "Advanced Manufacturing",
+    layout: "wide",
+  },
+  {
     src: "/images/gallery/factory-floor.svg",
     alt: "GAIB factory floor with agricultural equipment assembly",
     title: "Manufacturing Floor",

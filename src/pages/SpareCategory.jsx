@@ -23,7 +23,7 @@ const SpareCategory = () => {
   const posters = category?.posters || [];
 
   usePageSeo({
-    title: category ? `${category.title} | OEM Quality - GAIB Agro` : "Spare Parts Not Found | GAIB Agro",
+    title: category ? `${category.title} | Quality Parts - GAIB Agro` : "Spare Parts Not Found | GAIB Agro",
     description: category
       ? `${category.description} ${spareIntro}`
       : "The requested GAIB Agro spare parts category could not be found.",
@@ -34,7 +34,7 @@ const SpareCategory = () => {
           category.name,
           `${category.shortName} spare parts`,
           "GAIB Agro spare parts",
-          "OEM agricultural spare parts",
+          "agricultural spare parts",
           "agricultural implement spare parts",
         ]
       : undefined,
@@ -105,7 +105,7 @@ const SpareCategory = () => {
             <h2 className="mt-4 font-display text-3xl font-bold text-gaib-dark">Spare part support</h2>
             <div className="mt-6 grid gap-4">
               {[
-                "OEM quality agricultural implement spare parts",
+                "Genuine agricultural implement spare parts",
                 "Precision engineered and durable field-ready parts",
                 "Custom sizes available for selected components",
                 "Send part name, size, machine model and photo for enquiry",

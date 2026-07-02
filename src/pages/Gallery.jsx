@@ -49,6 +49,7 @@ const Gallery = () => {
         description="Browse GAIB equipment details, manufacturing views, and quality-focused visuals."
         image="/images/gallery/workshop-line.svg"
         imageAlt="GAIB workshop line"
+        compactTitle
       />
       <Section className="bg-white">
         <div className="mb-10">
@@ -96,7 +97,11 @@ const Gallery = () => {
               <img
                 src={image.src}
                 alt={image.alt}
-                className={`w-full object-cover ${index % 3 === 0 ? "aspect-[4/5]" : "aspect-[4/3]"}`}
+                className={
+                  image.layout === "wide"
+                    ? "aspect-[2/1] w-full bg-white object-contain"
+                    : `w-full object-cover ${index % 3 === 0 ? "aspect-[4/5]" : "aspect-[4/3]"}`
+                }
                 loading="lazy"
               />
               <span className="block px-5 py-4 font-semibold text-gaib-dark">{image.title}</span>

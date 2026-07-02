@@ -17,7 +17,7 @@ import { buildBreadcrumbSchema, siteUrl } from "../utils/seo";
 
 const highlights = [
   {
-    title: "OEM Quality",
+    title: "Genuine Quality",
     text: "Manufactured by GAIB AGRO EQUIPMENT PVT. LTD. for reliable field performance.",
     icon: FiPackage,
   },
@@ -44,7 +44,7 @@ const Spares = () => {
   usePageSeo({
     title: "Agricultural Implement Spare Parts | GAIB Agro Equipment",
     description:
-      "OEM quality agricultural implement spare parts by GAIB Agro Equipment Pvt Ltd. Multi Crop Thresher, Seed Drill, Cultivator, Sprayer and general spare parts. Custom sizes available.",
+      "Genuine agricultural implement spare parts by GAIB Agro Equipment Pvt Ltd. Multi Crop Thresher, Seed Drill, Cultivator, Sprayer and general spare parts. Custom sizes available.",
     image: "/images/spares/multi-crop-thresher-spare-parts.webp",
     canonical: "/spares/",
     keywords: [
@@ -87,7 +87,7 @@ const Spares = () => {
     <>
       <PageHero
         eyebrow="Spares"
-        title="OEM agricultural implement spare parts."
+        title="Agricultural implement spare parts."
         description={spareIntro}
         image="/images/spares/posters/elevator-bucket-conveyor-fasteners.webp"
         imageAlt="GAIB Agro combined thresher spare parts poster"
@@ -114,7 +114,7 @@ const Spares = () => {
         <Heading
           eyebrow="Categories"
           title="Spare parts by machine category."
-          description="Choose the machine category to view grouped WebP spare-parts posters and common OEM part details."
+          description="Choose the machine category to view grouped WebP spare-parts posters and common part details."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {spareCategories.map((category) => (

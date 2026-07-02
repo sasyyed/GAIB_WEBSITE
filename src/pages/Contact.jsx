@@ -130,6 +130,7 @@ const Contact = () => {
         description={`${company.englishTagline}. ${company.promise}`}
         image="/images/products/baba-super-multi-crop-thresher-square.webp"
         imageAlt="Baba Super Multi Crop Thresher"
+        compactTitle
       />
       <Section className="bg-white">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

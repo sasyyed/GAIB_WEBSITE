@@ -144,10 +144,13 @@ const About = () => {
         description="Based in Bundi, Rajasthan, GAIB Agro manufactures subsidy-approved agricultural implements for farmers, dealers, custom hiring centres and agricultural cooperatives."
         image="/images/pages/about-us.webp"
         imageAlt="GAIB Agro Equipment manufacturing facility in Bundi Rajasthan with agricultural implements"
+        compactTitle
+        imageWrapClassName="grid aspect-[3/2] place-items-center overflow-hidden rounded-[24px] bg-white shadow-card"
+        imageClassName="h-full w-full object-cover"
       />
 
       <Section className="bg-white">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <div>
             <p className="font-display text-sm font-bold uppercase tracking-[0.14em] text-gaib-green">
               Trusted Since 2010
@@ -174,11 +177,11 @@ const About = () => {
               </p>
             </div>
           </div>
-          <div className="grid aspect-[3/2] place-items-center rounded-[24px] bg-gaib-cream p-3 shadow-card">
+          <div className="grid aspect-[3/2] place-items-center overflow-hidden rounded-[24px] bg-gaib-cream shadow-card">
             <img
               src="/images/pages/about-us.webp"
               alt="GAIB Agro Equipment product range and mission"
-              className="max-h-full max-w-full object-contain"
+              className="h-full w-full object-cover"
               loading="lazy"
             />
           </div>

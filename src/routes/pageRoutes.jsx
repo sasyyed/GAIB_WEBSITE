@@ -1,20 +1,18 @@
-import { lazy } from "react";
-
-const Home = lazy(() => import("../pages/Home"));
-const Products = lazy(() => import("../pages/Products"));
-const ProductDetails = lazy(() => import("../pages/ProductDetails"));
-const Spares = lazy(() => import("../pages/Spares"));
-const SpareCategory = lazy(() => import("../pages/SpareCategory"));
-const GovernmentSubsidy = lazy(() => import("../pages/GovernmentSubsidy"));
-const About = lazy(() => import("../pages/About"));
-const Gallery = lazy(() => import("../pages/Gallery"));
-const Dealers = lazy(() => import("../pages/Dealers"));
-const Jobs = lazy(() => import("../pages/Jobs"));
-const Contact = lazy(() => import("../pages/Contact"));
-const ExportEnquiry = lazy(() => import("../pages/ExportEnquiry"));
-const Faq = lazy(() => import("../pages/Faq"));
-const Blog = lazy(() => import("../pages/Blog"));
-const NotFound = lazy(() => import("../pages/NotFound"));
+import About from "../pages/About";
+import Blog from "../pages/Blog";
+import Contact from "../pages/Contact";
+import Dealers from "../pages/Dealers";
+import ExportEnquiry from "../pages/ExportEnquiry";
+import Faq from "../pages/Faq";
+import Gallery from "../pages/Gallery";
+import GovernmentSubsidy from "../pages/GovernmentSubsidy";
+import Home from "../pages/Home";
+import Jobs from "../pages/Jobs";
+import NotFound from "../pages/NotFound";
+import ProductDetails from "../pages/ProductDetails";
+import Products from "../pages/Products";
+import SpareCategory from "../pages/SpareCategory";
+import Spares from "../pages/Spares";
 
 export const pageRoutes = [
   { path: "/", element: <Home /> },
